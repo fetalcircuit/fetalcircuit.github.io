@@ -1,0 +1,33 @@
+---
+layout: default
+---
+<div class="home">
+
+  <div class="overlay"></div>
+  <div class="modal">{{ content }}</div>
+  {{ content }}
+  <figure><img src="/assets/images/zelda_fire_render.gif" title="A campfire smells sad and exciting at the same time" width="100px;" align="left" style="padding-right:10px;"><figcaption>
+  <mark>Tiffany Funk</mark> (PhD) is an artist, critical theorist, and researcher
+  specializing in emerging media, computer art, video games, and performance art practices.
+  She is the Editor-in-Chief of the <em>Video Game Art Reader</em> and Co-founding Lecturer and
+  Academic Advisor of IDEAS (Interdisciplinary Education in the Arts)&mdash;an intermedia,
+  theory and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.</figcaption></figure>
+</br>
+  <h1 class="page-heading">NEWS: upcoming #publications #exhibitions #presentations</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        {% assign date_format = site.minima.date_format | default: "%b %-d, %Y" %}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+
+</div>

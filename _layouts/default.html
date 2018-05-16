@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: " en " }}">
+
+<script language="javascript" type="text/javascript" src="../assets/js/libraries/p5.js"></script>
+<!-- uncomment lines below to include extra p5 libraries -->
+<script language="javascript" type="text/javascript" src="../assets/js/libraries/p5.dom.js"></script>
+<!--<script language="javascript" src="libraries/p5.sound.js"></script>-->
+<script language="javascript" type="text/javascript" src="../assets/js/sketch.js"></script>
+<script language="javascript" type="text/javascript" src="../assets/js/letter.js"></script>
+<style>
+background-image {position:"fixed";}
+</style>
+{% include head.html %}
+
+<body>
+  <div class="home-link">
+  <a href="/index.html"><span class="clickable"></span></a>
+</div>
+  <div class="container">
+    {% include header.html %}
+
+    <main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        {{ content }}
+      </div>
+    </main>
+
+    {% include footer.html %}
+
+  </div>
+
+</body>
+
+</html>
