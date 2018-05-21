@@ -1,5 +1,5 @@
 ---
-layout: "post"
+layout: post
 title: "The Ears Have Walls: A Survey of Sound Games"
 date: "2017-12-01 13:57:03 -0600"
 ---

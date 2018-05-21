@@ -1,5 +1,5 @@
 ---
-layout: "post"
+layout: post
 title: "VGA Reader Call for Papers - Issue 2: SURVIVAL STRATEGY"
 ---
 <figure><img alt="zelda" src="/assets/images/zelda.gif">
