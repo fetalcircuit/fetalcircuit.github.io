@@ -1,5 +1,5 @@
 ---
-layout: "post"
+layout: post
 title: "VGA Reader version_1.1.2017 available now!"
 date: "2017-11-05 13:57:03 -0600"
 ---
