@@ -7,7 +7,7 @@ title: "Gun Ballet: the Aestheticization of Violence in Video Games"
 <figcaption>Karl Burke, <em>The Harvest of Death v2.0</em></figcaption>
 </figure>
 <p>
-**[Gun Ballet: the Aestheticization of Violence in Video Games](https://www.videogameartgallery.com/events/2018/3/2/gun-ballet-the-aestheticization-of-violence-in-video-games)**  
+<a href="https://www.videogameartgallery.com/events/2018/3/2/gun-ballet-the-aestheticization-of-violence-in-video-games">Gun Ballet: the Aestheticization of Violence in Video Games</a>
 March 2 - June 24, 2018
 </p>
 <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11876.036976401963!2d-87.68799!3d41.91416!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xc56fae1adae13234!2sVGA+Gallery!5e0!3m2!1sen!2sus!4v1512853525658" width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
