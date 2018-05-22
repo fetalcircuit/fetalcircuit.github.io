@@ -13,8 +13,8 @@ permalink: /cv/
 Co-founding Lecturer and Academic Advisor
 of Interdisciplinary Education in the Arts (IDEAS), University of Illinois at Chicago;<br />
 Editor-in-Chief of the <em>Video Game Art Reader</em></p>
-    </li>
     <h5><a href="/assets/tfunk_2018.02.23_short_cv_no_ref.pdf">[full cv]</a></h5>
+</li>
     <h2><span class="post-link">EDUCATION</span></h2>
     <li>
       <span class="post-meta">
