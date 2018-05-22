@@ -4,7 +4,7 @@ title: "VGA Reader Call for Papers - Issue 2: SURVIVAL STRATEGY"
 ---
 <figure><img alt="zelda" src="/assets/images/zelda.gif">
 <figcaption>IT’S DANGEROUS TO GO ALONE! TAKE THIS. — Old Man, The Legend of Zelda</figcaption></figure>
-<span class="post-meta">
+<p>
 In an era of ecological, social, and political crisis, when contemporary media inundates
 us daily with apocalyptic scenarios, video games can act as a valuable means of
 psychological escape. However, video games— as unique, participatory works of art—
@@ -19,13 +19,13 @@ and shape cognitive control and physical reflexes. How do video games, through t
 unique methods, participate in the larger context of radical, activist artworks that
 challenge destructive norms and structures of power? How can we harness the skills we
 develop through play— or “game the system”— to imagine our best possible future(s) in
-trying times?</span><br /><br />
-<span class="post-meta">
+trying times?</p><br /><br />
+<p>
 The <mark>VGA Reader (VGAR)</mark> is accepting submissions that critically analyze video game
 art as a means of survival. Though “survival strategy” exists as a defined gaming genre,
 all video games can be considered as methods of human conditioning, coping, and
 creating.
-</span><br /><br />
+</p><br /><br />
 <span class="post-meta">
 Possible topics include but are not limited to:
 <ul class="ytext">

@@ -1,5 +1,5 @@
 ---
-layout: "post"
+layout: post
 title: "Gun Ballet: the Aestheticization of Violence in Video Games"
 ---
 <figure>
