@@ -14,7 +14,7 @@ permalink: /cv/
 Co-founding Lecturer and Academic Advisor
 of Interdisciplinary Education in the Arts (IDEAS), University of Illinois at Chicago;<br />
 Editor-in-Chief of the <em>Video Game Art Reader</em></p>
-    <h5><a href="/assets/tfunk_2018.02.23_short_cv_no_ref.pdf">[full cv]</a></h5>
+    <h5><a href="/assets/tfunk_2019.12.18_short_cv_no_ref.pdf">[full cv]</a></h5>
 </li>
     <h2><span class="post-link">EDUCATION</span></h2>
     <li>
@@ -47,12 +47,17 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+        <th>Forthcoming</th>
+        <td>“Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,” Seismograf 22 (Winter 2020).</td>
+        </tr>
           <tr>
             <th>Book Chapters</th>
             <td>"Dirty Your Media: Artists’ Experiments in Digital Bio-Sovereignty," chapter in <em>The Aesthetics of Necropolitics</em>, ed. Natasha Lushetich (London: Rowman and Littlefield, 2018).</td>
           </tr>
           <tr>
             <th>Articles</th>
+            <td>Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, “From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,” Frieze, December 18, 2019, https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s.</td>
             <td>“’A MUSICAL SUITE COMPOSED BY AN ELECTRONIC BRAIN’: Reexamining the <em>Illiac Suite</em> and the Legacy of Lejaren A. Hiller Jr. in Conceptual Art,” <em>Leonardo Music Journal</em>, 28 (December 2018).
               <br /><br />“Would You Like to Play a Game?” <em>The Video Game Art Reader</em>, 1:1 (Fall 2017).
               <br /><br />"The Prosthetic Aesthetic: An Art of Anxious Extensions," Mid-America College Art Association Conference 2012 Digital Publications (2012).
@@ -67,6 +72,7 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
           </tr>
           <tr>
             <th>Interviews</th>
+            <td>"Make Beautiful Things Together: Tiffany Funk interviews Anna Anthropy," <em>Video Game Art Reader 2</em> (Fall 2018)</td>
             <td>“‘Scale’: The Sound of Interspecies Communication? Tiffany Funk interviews Marlena Novak," <em>Antennae: The Journal of Nature in Visual Culture</em> 28 (Summer 2014): 50-59.</td>
           </tr>
         </table>
@@ -76,6 +82,18 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+        <th>2020</th>
+        <td>“The Legacy of Jack Burnham on Video Game Art and Emerging New Media” co-chair, College Art Association Annual Conference, February 12–15, 2020, Chicago IL</td>
+        </tr>
+        <tr>
+        <th>2019</th>
+        <td>“VGA Reader Roundtable: Emerging Infrastructures for Video Game Art,” Society for Literature, Science, and the Arts Annual Conference, Irvine CA
+        <br /><br />“Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,” RE:SOUND, the 8th International Conference for Histories of Media Arts 2019, Aalborg, Denmark
+        <br /><br />“Speculation/Memory” Panel, Living a Digital Life: Objects, Environments, Power, 2019 Michigan Meeting panel invitation, University of Michigan, Ann Arbor MI
+        <br /><br />“Writing In and Outside of Video Games” Roundtable, 2019 Progression Mechanics 2, Northwestern University, Evanston IL
+        </td>
+        </tr>
         <tr>
           <th>2018</th>
           <td>“Video Game Art: Pedagogy and Research,” Chicago Colloquium on Digital Humanities and Computer Science, Loyola University, Chicago IL
@@ -117,10 +135,14 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
         </table>
       </span>
     </li>
-    <h2><span class="post-link">EDITORIAL EXPERIENCE / PEER-REVIEW</span></h2>
+    <h2><span class="post-link">PROFESSIONAL SERVICE: EDITORIAL EXPERIENCE / PEER-REVIEW COMMITTEES</span></h2>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+          <th>2018-present</th>
+          <td>Chicago Colloquium on Digital Humanities and Computer Science (DHCS) Steering Committee Member</td>
+        </tr>
           <tr>
             <th>2016-present</th>
             <td>Editor-in-Chief, <em>Video Game Art Reader</em>, VGA Gallery, Chicago IL
@@ -141,6 +163,10 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+        <th>2019</th>
+        <td>Hole Black Hole Catalog, Summer 2019, Flatland, Chicago IL</th>
+        </tr>
         <tr>
           <th>2018</th>
           <td>Chicago New Media 1973-1992, Gallery 400, Chicago IL

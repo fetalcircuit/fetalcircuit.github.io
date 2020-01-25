@@ -3,6 +3,18 @@ layout: page
 title: DATA VIZ
 permalink: /dataviz/
 ---
+<h2><span class="post-link">Blackbox (n.)</span></h2>
+<ul class="post-list">
+  <li>
+    <span class="post-meta">2019, multimedia</span>
+        </li>
+      </ul>
+<img src="../assets/images/art/blackboxfunk-1.png" width="100%" align="left" style="padding-right:10px; padding-bottom:10px;">
+<p style="padding-top:10px">These diagramatic passages use software flowchart methods and aesthetics to explore the effects that the term "blackbox" as metaphor/software/theory have on knowledge generation. What would a "cult of the black box" look like, or are we already unwitting members?
+Included in the Hole Black Hole Catalog, produced by Flatland, Chicago.
+<br /><br />
+<a href="http://flatland.online/index.php/archive/hbh/"><em>Hole Black Hole Catalog</em>, "Blackbox (n.)," <em>Flatland</em>, 2019.</a>
+  <br /><br />
 <h2><span class="post-link">I CHING ONLINE</span></h2>
 <ul class="post-list">
   <li>
