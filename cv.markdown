@@ -57,8 +57,8 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
           </tr>
           <tr>
             <th>Articles</th>
-            <td>Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, “From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,” Frieze, December 18, 2019, https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s.</td>
-            <td>“’A MUSICAL SUITE COMPOSED BY AN ELECTRONIC BRAIN’: Reexamining the <em>Illiac Suite</em> and the Legacy of Lejaren A. Hiller Jr. in Conceptual Art,” <em>Leonardo Music Journal</em>, 28 (December 2018).
+            <td>Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, “From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,” Frieze, December 18, 2019, https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s.
+            <br /><br />“’A MUSICAL SUITE COMPOSED BY AN ELECTRONIC BRAIN’: Reexamining the <em>Illiac Suite</em> and the Legacy of Lejaren A. Hiller Jr. in Conceptual Art,” <em>Leonardo Music Journal</em>, 28 (December 2018).
               <br /><br />“Would You Like to Play a Game?” <em>The Video Game Art Reader</em>, 1:1 (Fall 2017).
               <br /><br />"The Prosthetic Aesthetic: An Art of Anxious Extensions," Mid-America College Art Association Conference 2012 Digital Publications (2012).
             </td>
@@ -72,8 +72,8 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
           </tr>
           <tr>
             <th>Interviews</th>
-            <td>"Make Beautiful Things Together: Tiffany Funk interviews Anna Anthropy," <em>Video Game Art Reader 2</em> (Fall 2018)</td>
-            <td>“‘Scale’: The Sound of Interspecies Communication? Tiffany Funk interviews Marlena Novak," <em>Antennae: The Journal of Nature in Visual Culture</em> 28 (Summer 2014): 50-59.</td>
+            <td>"Make Beautiful Things Together: Tiffany Funk interviews Anna Anthropy," <em>Video Game Art Reader 2</em> (Fall 2018)
+            <br /><br />“‘Scale’: The Sound of Interspecies Communication? Tiffany Funk interviews Marlena Novak," <em>Antennae: The Journal of Nature in Visual Culture</em> 28 (Summer 2014): 50-59.</td>
           </tr>
         </table>
       </span>
@@ -135,14 +135,14 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
         </table>
       </span>
     </li>
-    <h2><span class="post-link">PROFESSIONAL SERVICE: EDITORIAL EXPERIENCE / PEER-REVIEW COMMITTEES</span></h2>
+    <h2><span class="post-link">PROFESSIONAL SERVICE: COMMITTEES / EDITORIAL / PEER-REVIEW </span></h2>
     <li>
       <span class="post-meta">
         <table>
         <tr>
           <th>2018-present</th>
           <td>Chicago Colloquium on Digital Humanities and Computer Science (DHCS) Steering Committee Member</td>
-        </tr>
+          </tr>
           <tr>
             <th>2016-present</th>
             <td>Editor-in-Chief, <em>Video Game Art Reader</em>, VGA Gallery, Chicago IL
@@ -165,7 +165,7 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
         <table>
         <tr>
         <th>2019</th>
-        <td>Hole Black Hole Catalog, Summer 2019, Flatland, Chicago IL</th>
+        <td>Hole Black Hole Catalog, Summer 2019, Flatland, Chicago IL</td>
         </tr>
         <tr>
           <th>2018</th>
