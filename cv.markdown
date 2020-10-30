@@ -82,8 +82,7 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
         <table>
         <tr>
         <th>2021</th>
-        <td>“Quarantine Inside the White Cube” co-chair, College Art Association Annual Conference, February 10-13, New York NY (online)
-        <br /><br />“The Legacy of Jack Burnham on Video Game Art and Emerging New Media” co-chair, College Art Association Annual Conference, February 12–15, 2020, Chicago IL</td>
+        <td>“Quarantine Inside the White Cube” co-chair, College Art Association Annual Conference, February 10-13, New York NY (online)</td>
         </tr>
         <tr>
         <th>2020</th>
