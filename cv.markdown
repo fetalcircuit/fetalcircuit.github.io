@@ -48,8 +48,16 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+        <th>Books</th>
+        <td><em>Zen and the Art of Software Performance: John Cage and Lejaren A. Hiller Jr.'s HPSCHD</em>, Urbana, IL: University of Illinois Press (under contract).</td>
+        </tr>
           <tr>
             <th>Book Chapters</th>
+            <td>“Decoding Vera Molnár: Artist, Painter,” <em>Vera Molnár: Variations</em>, Cambridge, MA: MIT Press (under contract).
+<br /><br />
+“John Cage and Lejaren Hiller Jr.’s HPSCHD, 1967-1969,” in <em>Coded: Early Computational Art</em> (Los Angeles, LA: Los Angeles County Art Museum, 2022).
+            <br /><br />
             <td>"Dirty Your Media: Artists’ Experiments in Digital Bio-Sovereignty," chapter in <em>The Aesthetics of Necropolitics</em>, ed. Natasha Lushetich (London: Rowman and Littlefield, 2018).</td>
           </tr>
           <tr>
@@ -81,8 +89,26 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
       <span class="post-meta">
         <table>
         <tr>
+        <th>2022</th>
+        2022	“NFT Art: No FuTure,” UIC Alumni Exchange, University of Illinois at Chicago (forthcoming
+)
+<br /><br />
+“Introduction to Computational Arts,” Uncommon Hacks Workshop, University of Chicago, April 2, 2022, Chicago IL
+<br /><br />
+“The VGA Connection: Video Game Art Gallery and the Chicago Art+Game Communities,” Panel: Local Game Histories of Chicago and the American Midwest, Society for Cinema and Media Studies Annual Conference, March 31, 2022, Chicago IL</tr>
+        <tr>
         <th>2021</th>
-        <td>“Quarantine Inside the White Cube” co-chair, College Art Association Annual Conference, February 10-13, New York NY (online)</td>
+        <td>“’Purposeless Play’: John Cage the Gamer,” panel chair, ReVIEWING: Black Mountain College Conference 12, November 13, 2021, Asheville NC
+<br /><br />
+        “GACK: The Game Art Curator’s Kit,” Society for Literature, Science, and the Arts Annual Conference, September 30-October 3, 2021, Ann Arbor MI
+<br /><br />
+        ““Deep Listening” redux: Early Computational Composition and Its Influence on Algorithmic Aesthetics,” invited lecture, American School of Modern Languages and Culture, Hong Kong University, April 26, Hong Kong
+<br /><br />
+        First Year Seminar (FYS) Summit area coordinator and presenter, April 28-29, University of Illinois at Chicago, Chicago IL
+<br /><br />
+        NTX Gaming Symposium, Pedagogy Roundtable invited panelist, March 13, Texas Christian University, Fort Worth TX
+<br /><br />
+        “Quarantine Inside the White Cube” co-chair, College Art Association Annual Conference, February 10-13, New York NY (online)</td>
         </tr>
         <tr>
         <th>2020</th>
@@ -166,6 +192,22 @@ Editor-in-Chief of the <em>Video Game Art Reader</em></p>
     <li>
       <span class="post-meta">
         <table>
+        <tr>
+        <th>2022</th>
+        “Unboxing Black Boxes and Black Holes,” MDW Fair, Chicago IL
+        <br /><br />
+Computational Poetics, Beall Center for Art + Technology, Irvine CA
+  <br /><br />
+	The Antediluvians, Call of Cthulhu scenario, https://www.drivethrurpg.com/product/404861/The-Antediluvians</tr>
+  <tr>
+  <th>2021</th>
+Deep Feel https://deepfeel.art, The Wrong Biennale n5, https://thewrong.org/</tr>
+<tr>
+<th>2020</th>
+Defund + Defend: Digital Artifact for M4BL, https://www.defunddefend.newmediacaucus.org/
+Chicago New Media Artists for Racial Justice, https://itch.io/b/536/chicago-new-media-artists-for-racial-justice
+  <br /><br />
+Infected Instructions, https://www.infectedinstructions.org/</tr>
         <tr>
         <th>2019</th>
         <td>Hole Black Hole Catalog, Summer 2019, Flatland, Chicago IL</td>
