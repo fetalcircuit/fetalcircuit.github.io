@@ -1,7 +1,7 @@
 ---
 layout: page
-title: PUBLICATIONS
-permalink: /publications/
+title: Writing
+permalink: /writing/
 ---
 <table>
 <tr>
