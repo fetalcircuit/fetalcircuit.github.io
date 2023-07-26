@@ -1,0 +1,35 @@
+# Site Build Settings
+
+# jekyll-paginate configuration
+paginate:            5
+
+# Build settings
+markdown:            kramdown
+highlighter:         rouge
+permalink:           /:title
+plugins:             [jekyll-paginate, jekyll-sitemap, jekyll-feed, jekyll-seo-tag]
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Tiffany Funk
+description: //\\__digital media__performance__computer art__video games__//\\
+email: tiffany.a.funk@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  artist && critical theorist && researcher in emerging media, computer art, video games && performance art practices
+baseurl:  # the subpath of your site, e.g. /blog
+url: # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: tiffunk
+github_username:  FetalCircuit
+instagram_username: tiffany_funk
+
+# Customise atom feed settings (this is where Jekyll-Feed gets configuration information)
+# title:		           "Millennial"
+# description:	       "a minimalist Jekyll theme for running a blog or publication"
+# author:              "Paul Le"
+
+# RSS 2.0 can be used instead of Atom by uncommenting following two lines
+#feed:
+#  path: rss-feed.xml

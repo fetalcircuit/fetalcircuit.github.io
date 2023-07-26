@@ -1,0 +1,33 @@
+# Change 'comments' to true for Disqus comments
+disqus:
+  comments: false
+  disqus_shortname: 'millennial-3'
+
+# If you are not using Google Analytics, please change 'google-ID' to an empty string
+google-ID: ''
+
+menu:
+- {name: 'About',              url: 'about'}
+- {name: 'Writing',            url: 'writing'}
+- {name: 'net.art',            url: 'art'}
+- {name: 'Sound',              url: 'sound'}
+
+# Available social icons are powered by Font Awesome, so you can use any icon that they offer
+social:
+- {icon: 'instagram', link:  'https://instagram.com/tiffany_funk'}
+- {icon: 'envelope', link:   'mailto:tiffany.a.funk@gmail.com'}
+- {icon: 'github', link:     'https://github.com/fetalcircuit'}
+- {icon: 'soundcloud', link: 'https://soundcloud.com/fetalcircuit'}
+- {icon: 'rss-square', link: 'feed.xml'}
+# - {icon: 'rss-square', link: 'rss-feed.xml'}
+
+# Customize site text
+pagination:
+  next_page: 'Newer'
+  previous_page: 'Older'
+
+# sharing_button_prompt: 'Feel free to share!'
+
+related_posts: 'More:'
+
+# post_date_prefix: 'Written on'
