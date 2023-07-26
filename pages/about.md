@@ -14,7 +14,7 @@ She researches and develops work exploring current and historical digital techno
 
 Funk is the Editor-in-Chief of the *Video Game Art Reader*, a peer-reviewed journal for video game audiences and video game practitioners interested in the history, theory, and criticism of video games, explored through the lens of art history and visual culture. Its primary aim is to facilitate conversation and exploration of video game art, documenting and disseminating discourse about the far-reaching influence of video games on history, society, and culture.
 
-She is co-founder of IDEAS (Interdisciplinary Education in the Arts)—an intermedia, theory, and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.
+She is co-founder of [IDEAS (Interdisciplinary Education in the Arts)](https://artandarthistory.uic.edu/ideas)—an intermedia, theory, and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.
 
 <a href="..portfolio/assets/tfunk_2023.07.12_cv.pdf">[full cv]</a>
 
