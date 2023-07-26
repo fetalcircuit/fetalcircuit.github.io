@@ -7,9 +7,9 @@ image: blackbox_header.png
 ---
 
 <html>
-    <a href="/img/blackbox.pdf">
+    <a href="/assets/img/blackbox.pdf">
 <figure>
-    <img src="/img/blackbox_header.png"
+    <img src="/assets/img/blackbox_header.png"
          alt="Blackbox flowchart" width="100%">
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
 </figure></a></html>
