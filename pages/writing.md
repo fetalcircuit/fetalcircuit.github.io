@@ -13,7 +13,7 @@ image: blackbox_header.png
          alt="Blackbox flowchart" width="100%">
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
 </figure></a></html>
-<br>
+<br><br>
 
 |Selected bibliography:|  
 |--------------------- |
