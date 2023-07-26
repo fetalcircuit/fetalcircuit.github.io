@@ -6,8 +6,8 @@ permalink: /writing
 image: coded.png
 ---
 <figure>
-    <img src="/img/blackbox_header.png"
-         alt="Blackbox flowchart">
+    <a href="/img/blackbox.pdf"><img src="/img/blackbox_header.png"
+         alt="Blackbox flowchart"></a>
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
 </figure>
 
