@@ -120,3 +120,17 @@ th, td {
   padding: 15px;
   text-align: left;
 }
+
+...
+.cell-highlight {
+  background-color: gold;
+  font-weight: bold;
+}
+
+tbody tr:nth-child(odd) {
+  background-color: #fff;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #eee;
+}
