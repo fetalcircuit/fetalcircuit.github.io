@@ -3,7 +3,7 @@ layout: page
 title: Writing
 category: writing
 permalink: /writing
-image: coded.png
+image: blackbox_header.png
 ---
 <html>
 <figure>
