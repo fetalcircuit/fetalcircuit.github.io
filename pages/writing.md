@@ -13,7 +13,7 @@ image: blackbox_header.png
 </figure></html>
 <br><br>
 
-|### Selected bibliography:|  
+|Selected bibliography:|  
 |--------------------- |
 |"John Cage and Lejaren A. Hiller Jr., HPSCHD," is included in the [Coded: Art Enters the Computer Age, 1952-1982](https://www.thelacmastore.org/collections/coded-art-enters-the-computer-age-1952-1982/products/coded) exhibition catalog, accompanying the "Coded" exhibition at LACMA from February to July, 2023. |
 |["Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,"](https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/RESOUND19.7) 43-50, Conference proceedings, RE:SOUND, the 8th International Conference for Histories of Media Arts 2019, Aalborg, Denmark, August 2019, doi: 10.14236/ewic/RESOUND19.7.|
