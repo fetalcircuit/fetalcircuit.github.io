@@ -12,7 +12,7 @@ image: coded.png
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
 </figure>
 </html>
-
+<br><br>
 |Selected bibliography:|  
 |--------------------- |
 |"John Cage and Lejaren A. Hiller Jr., HPSCHD," is included in the [Coded: Art Enters the Computer Age, 1952-1982](https://www.thelacmastore.org/collections/coded-art-enters-the-computer-age-1952-1982/products/coded) exhibition catalog, accompanying the "Coded" exhibition at LACMA from February to July, 2023. |
