@@ -6,11 +6,12 @@ permalink: /writing
 image: blackbox_header.png
 ---
 <html>
+    <a href="/img/blackbox.pdf">
 <figure>
-    <a href="/img/blackbox.pdf"><img src="/img/blackbox_header.png"
-         alt="Blackbox flowchart" width="100%"></a>
+    <img src="/img/blackbox_header.png"
+         alt="Blackbox flowchart" width="100%">
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
-</figure></html>
+</figure></a></html>
 <br><br>
 
 |Selected bibliography:|  
