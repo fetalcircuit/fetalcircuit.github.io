@@ -20,7 +20,7 @@ email: tiffany.a.funk@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   artist && critical theorist && researcher in emerging media, computer art, video games && performance art practices
 baseurl:  # the subpath of your site, e.g. /blog
-url: https://tiffanyfunk.com
+url: # https://tiffanyfunk.com
 twitter_username: tiffunk
 github_username:  FetalCircuit
 instagram_username: tiffany_funk
