@@ -5,13 +5,11 @@ category: writing
 permalink: /writing
 image: coded.png
 ---
-<html>
 <figure>
     <a href="/img/blackbox.pdf"><img src="/img/blackbox_header.png"
          alt="Blackbox flowchart" width="100%"></a>
     <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
 </figure>
-</html>
 <br><br>
 |Selected bibliography:|  
 |--------------------- |
