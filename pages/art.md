@@ -4,14 +4,23 @@ title: net.art
 permalink: /art/
 ---
 
+## ORACLE I
+#### 2023, video (ChatGPT, Runway AI, custom sound hardware)
+
+<img src="../assets/img/oracleI1.png" width="100%">
+<img src="../assets/img/oracleI2.png" width="100%">
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/881078741?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Oracle I"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
+
+Oracle I was generated using AI video generation software using prompts from ICHING (Book of Changes) passages alongside stylistic markers of 1970s sci-fi cinema. The resultant videos are edited together to create a retro-futuristic trailer for a speculative film exploring a future of the past, where hollow beings flit in and out of setpieces referencing forever wars, forbidden love, and techno-colonialism.
+
 ## I CHING ONLINE
 #### 2016-present, website (HTML5, Processing, p5.js)
 
 <img src="../assets/img/iching.png" width="100%">
 
-This software generates *IChing (Book of Changes)* readings for the user.  Each image provides a symbolic representation of the resultant hexigram; the images are generated through an algorithm based upon the coin-toss method of IChing divination and Lejaren Hiller’s ILLIAC II subroutine ICHING [1]. The text generated onscreen will include pertinent selections from the most popular translations and commentaries of the IChing.
+This software generates IChing (Book of Changes) readings for the user. Each image provides a symbolic representation of the resultant hexigram; the images are generated through an algorithm based upon the coin-toss method of IChing divination and Lejaren A. Hiller Jr’s ILLIAC II subroutine ICHING, developed in 1969 at the University of Illinois for the multimedia performance HPSCHD. The text generated onscreen will include pertinent selections from the most popular translations and commentaries of the IChing.
 
-The aesthetic of these generative covers is based on 1970s science-fiction pulp paperbacks. Unlike the cover art of the 1960s, 70s cover art tended toward the more surreal, psychedelic, and symbolic.  Many of these artists and authors found inspiration from Eastern philosophy – a prominent example being Philip K. Dick and his interest in IChing divination.
+The aesthetic of these generative covers is based on 1970s science-fiction pulp paperbacks. Unlike the cover art of the 1960s, 70s cover art tended toward the more surreal, psychedelic, and symbolic. Many of these artists and authors—Ursula K. Le Guin, Philip K. Dick, Frank Herbert, Roger Zelazny, and many others—found inspiration from Eastern philosophies and religions and helped popularize techno-Orientalism trends that continue to shape issues of race and technology in the present.
 
 [I CHING ONLINE PORTAL](https://fetalcircuit.github.io/iching/)
 
