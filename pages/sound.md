@@ -3,7 +3,7 @@ layout: page
 title: Sound
 permalink: /sound
 ---
-### Dance to Anything, Lake Eden
+## Dance to Anything, Lake Eden
 Performance at {RE}:Happening 11, Black Mountain NC, April 8, 2023
 
  <img src="/assets/img/eden.png" alt="Dance to Anything Lake Eden" width="100%">
