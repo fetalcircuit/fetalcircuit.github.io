@@ -23,14 +23,14 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 {
   font-size: 40px;
-  font-family: 'Pirata One', system-ui;
+  font-family: $header-font-family;
   color: YellowGreen;
   text-shadow: 0 0 1px Black, 0 0 1px Black, 0 0 1px Black, 0 0 1px Black;
 }
 h2 {
   margin-top: 1rem;
   font-size: 30px;
-  font-family: 'Pirata One', system-ui;
+  font-family: $header-font-family;
 }
 h3 {
   margin-top: 1.5rem;
