@@ -5,7 +5,7 @@ permalink: /art/
 ---
 
 ## ORACLE I
-#### 2023, video (ChatGPT, Runway AI, custom sound hardware)
+2023, video (ChatGPT, Runway AI, custom sound hardware)
 
 <img src="../assets/img/oracleI1.png" width="100%">
 <img src="../assets/img/oracleI2.png" width="100%">
@@ -14,7 +14,7 @@ permalink: /art/
 Oracle I was generated using AI video generation software using prompts from ICHING (Book of Changes) passages alongside stylistic markers of 1970s sci-fi cinema. The resultant videos are edited together to create a retro-futuristic trailer for a speculative film exploring a future of the past, where hollow beings flit in and out of setpieces referencing forever wars, forbidden love, and techno-colonialism.
 
 ## I CHING ONLINE
-#### 2016-present, website (HTML5, Processing, p5.js)
+2016-present, website (HTML5, Processing, p5.js)
 
 <img src="../assets/img/iching.png" width="100%">
 
@@ -32,7 +32,7 @@ The aesthetic of these generative covers is based on 1970s science-fiction pulp 
 </figure>
 
 ## INTERACTIVE FICTION/TEXT ADVENTURES
-#### 2018, websites (HTML5, Processing, Twine, p5.js)
+2018, websites (HTML5, Processing, Twine, p5.js)
 
 <img src="../assets/img/hex.png" width="100%">
 <img src="../assets/img/01chatter.gif" width="100%">
@@ -46,7 +46,7 @@ Websites/games/interactive fiction/non-fiction and text adventure experiments:
   <a href="https://fetalcircuit.github.io/murderhouse/">murder house</a>
 
 ## GENERATIVE KALEIDOCOPE
-#### 2016, website, custom software
+2016, website, custom software
     
 <img src="../assets/img/02kaleido.png" width="100%">
 
@@ -55,7 +55,7 @@ These are tests of a software application, originally coded in Processing and tr
 [Kaleidoscope portal](https://fetalcircuit.github.io/kaleidoscope/)
 
 ## MEMENTO MAURY
-#### 2015, custom software, video
+2015, custom software, video
 
 <div style="padding:66.88% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/144545106" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 <br />
@@ -66,28 +66,28 @@ Memento Maury is an exploration of gender essentialism and racial/cultural stere
 [Automatabahn archive @ acretv.org](http://www.acretv.org/category/automatabahn/)
 
 ## PISTOL MANDALA
-#### 2016, custom software, video
+2016, custom software, video
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/151813335" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Pistol Mandala is a series of prints and videos produced using custom code. Videos are generative, configuring .tif images of pistols into circular mandala forms for contemplation.
 
 ## "...AND THE DAY WILL BE BEAUTIFUL"
-#### 2016, digital video installation
+2016, digital video installation
 
 <div style="padding:66.67% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/187682400" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 This video was part of a site-specific installation featured in the Em(body) Exhibition in the Uptown Arts Center. The work celebrates the legacy of Preston Bradley, whose work in the Civil Rights movement in Chicago remains startlingly relevant.
 
 ## PORTRAITS (TERMINATORS)
-#### 2012, custom software, video
+2012, custom software, video
 
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/44964225" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Portraits (Terminators) is a video installation of 49 videos of young men's faces, but with bionic overlays (laser eyes, alloy jaws) on their features a la The Terminator. Each uploaded this content on social networking sites, creating an ad hoc community displaying their 3D tracking and modeling prowess. The tutorial they followed to produce these "portraits" begs the question, Why the Terminator? Why do they transform themselves into a militaristic cyborg, when this software is capable of an infinity of options? Or is it the software that influences the user to create such a figure?
 
 ## SANS SANS SOLEIL
-#### 2010, custom software
+2010, custom software
 
 <div style="padding:62.5% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/11626971" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
@@ -96,7 +96,7 @@ This visualization was inspired by Chris Marker's film <em>Sans Soleil</em>, a l
 [Download app](https://github.com/fetalcircuit/sanssanssoleil/releases/tag/v3.0)
 
 ## National UFO Reporting Agency reported sitings, 1925-2009
-#### 2009, custom software
+2009, custom software
 
 <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/8244687" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
