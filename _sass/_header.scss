@@ -20,9 +20,9 @@
   text-decoration: none;
 }
 .site-title {
-  font-size: 40px;
+  font-size: 45px;
   font-weight: 200;
-   font-family: 'Pirata One', system-ui;
+  font-family: $header-font-family;
   color: Yellow;
   text-shadow: 0 0 1px YellowGreen, 0 0 1px YellowGreen, 0 0 1px YellowGreen, 0 0 1px YellowGreen;
   line-height: 56px;
