@@ -21,7 +21,7 @@ image: blackbox_header.png
 
 ["Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,"](https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/RESOUND19.7) 43-50, Conference proceedings, RE:SOUND, the 8th International Conference for Histories of Media Arts 2019, Aalborg, Denmark, August 2019, doi: 10.14236/ewic/RESOUND19.7.  
 
-[Blackbox (n.), in Hole Black Hole Catalog, Flatland, 2019,"](https://flatland.online/index.php/archive/hbh/)  
+[Blackbox (n.), in Hole Black Hole Catalog, Flatland, 2019.](https://flatland.online/index.php/archive/hbh/)  
 > These diagramatic passages use software flowchart methods and aesthetics to explore the effects that the term "blackbox" as metaphor/software/theory have on knowledge generation. What would a "cult of the black box" look like, or are we already unwitting members? Included in the Hole Black Hole Catalog, produced by Flatland, Chicago.  
 
 [“From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,”](https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s) Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, <em>Frieze</em>, December 18, 2019.
