@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Resident Aliens: A Brief History of Videogames and Fine Art," ArtReview, March Issue"
+title: ""Resident Aliens: A Brief History of Videogames and Fine Art" in *ArtReview*, March Issue"
 author: "Tiffany Funk"
 categories: writing
 tags: [writing]
