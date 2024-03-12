@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "'Resident Aliens: A Brief History of Videogames and Fine Art' in *ArtReview*"
+title: "'Resident Aliens: A Brief History of Videogames and Fine Art'"
 author: "Tiffany Funk"
 categories: sample
 tags: [sample]
