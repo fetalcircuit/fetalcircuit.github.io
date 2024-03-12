@@ -2,8 +2,8 @@
 layout: post
 title: "'Resident Aliens: A Brief History of Videogames and Fine Art' in *ArtReview*"
 author: "Tiffany Funk"
-categories: writing
-tags: [writing]
+categories: sample
+tags: [sample]
 image: artreview.jpg
 ---
 
