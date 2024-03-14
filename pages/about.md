@@ -17,7 +17,7 @@ permalink: /about
 
 <p align="left">Funk is the Editor-in-Chief of the <em>Video Game Art Reader</em>, a peer-reviewed journal for video game audiences and video game practitioners interested in the history, theory, and criticism of video games, explored through the lens of art history and visual culture. Its primary aim is to facilitate conversation and exploration of video game art, documenting and disseminating discourse about the far-reaching influence of video games on history, society, and culture.</p>
 
-<p align="left">She is co-founder of <a href="https://artandarthistory.uic.edu/ideas">[IDEAS (Interdisciplinary Education in the Arts)]—an intermedia, theory, and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.</p>
+<p align="left">She is co-founder of <a href="https://artandarthistory.uic.edu/ideas">IDEAS (Interdisciplinary Education in the Arts)</a>—an intermedia, theory, and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.</p>
 
 <p align="left"><a href="assets/tfunk_2023.07.12_cv.pdf">[full cv]</a></p>
 
