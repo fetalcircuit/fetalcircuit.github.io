@@ -19,7 +19,7 @@ permalink: /about
 
 <p align="left">She is co-founder of <a href="https://artandarthistory.uic.edu/ideas">IDEAS (Interdisciplinary Education in the Arts)</a>—an intermedia, theory, and practice-based Bachelor of Arts degree at the University of Illinois at Chicago.</p>
 
-<p align="left"><a href="assets/tfunk_2023.07.12_cv.pdf">[full cv]</a></p>
+<p align="left"><a href="assets/tfunkcv_3_24.pdf">[full cv]</a></p>
 
 </td>
      </tr>
