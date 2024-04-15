@@ -12,6 +12,8 @@ Short retro-game sketches in game engine Bitsy.org.
 <iframe frameborder="0" src="https://itch.io/embed/2377327?linkback=true" width="552" height="167"><a href="https://funkstart.itch.io/i-went-to-mars">I Went to Mars by funkstart</a></iframe>
 <iframe frameborder="0" src="https://itch.io/embed/2369753?linkback=true" width="552" height="167"><a href="https://funkstart.itch.io/old-macdonald">Old MacDonald by funkstart</a></iframe>
 
+<iframe src="https://itch.io/embed/2377327" width="552" height="167" frameborder="0"><a href="https://funkstart.itch.io/i-went-to-mars">I Went to Mars by funkstart</a></iframe>
+
 ## ORACLE I
 2023, video (ChatGPT, Runway AI, custom sound hardware)
 
