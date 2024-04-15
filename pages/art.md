@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Art & Games
+title: Art and Games
 permalink: /art/
 ---
 ## bitsy game sketches
