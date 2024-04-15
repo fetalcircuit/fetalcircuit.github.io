@@ -1,6 +1,6 @@
 ---
 layout: page
-title: net.art
+title: art&&games
 permalink: /art/
 ---
 
