@@ -3,7 +3,7 @@ layout: page
 title: Art and Games
 permalink: /art/
 ---
-## bitsy game sketches
+## video game sketches
 ongoing, video games ([bitsy game engine](https://github.com/le-doux/bitsy))
 
 Short retro-game sketches in game engine Bitsy.org.
