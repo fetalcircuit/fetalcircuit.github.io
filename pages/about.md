@@ -16,7 +16,7 @@ permalink: /about
 
 <p align="left">Funk is the Director of Publications for the Video Game Art Gallery and the founder and Editor-in-Chief of the Video Game Art Reader, a peer-reviewed journal for video game audiences and practitioners interested in the history, theory, and criticism of video games, explored through the lens of art history and visual culture.</p>
 
-<p align="left"><a href="assets/tfunkcv_4_25.pdf">[full cv]</a></p>
+<p align="left"><a href="assets/cv_4_25.pdf">[full cv]</a></p>
 
 </td>
      </tr>
