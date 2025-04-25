@@ -10,7 +10,7 @@ permalink: /about
      <tr>
         <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="100%"></td>
 
-<td><p align="left"><b>Tiffany Funk</b> (PhD) is an artist, art historian, and writer specializing in emerging media, computer art, video games, and performance art. She researches and develops work that explores current and historical digital technological art practices.</p>
+<td><p align="left"><b>Tiffany Funk</b> (PhD) is an artist, art historian, and writer specializing in emerging media, computer art, video games, and performance art. She researches and develops work that explores current and historical technological art practices.</p>
 
 <p align="left">She co-founded IDEAS (Interdisciplinary Education in the Arts), an intermedia arts degree-granting program at the University of Illinois at Chicago.</p>
 
