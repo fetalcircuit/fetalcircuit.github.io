@@ -8,7 +8,7 @@ permalink: /about
 <div align="center">
     <table >
      <tr>
-        <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk"></td>
+        <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="25%"></td>
 
 <td><p align="left"><b>Tiffany Funk</b> (PhD) is an artist, critical theorist, and researcher specializing in emerging media, computer art, games, and performance art practices.</p>
 
