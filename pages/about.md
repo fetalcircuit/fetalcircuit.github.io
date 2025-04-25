@@ -8,7 +8,7 @@ permalink: /about
 <div align="center">
     <table >
      <tr>
-        <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="85%"></td>
+        <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="100%"></td>
 
 <td><p align="left"><b>Tiffany Funk</b> (PhD) is an artist, art historian, and writer specializing in emerging media, computer art, video games, and performance art. She researches and develops work that explores current and historical digital technological art practices.</p>
 
