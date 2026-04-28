@@ -8,7 +8,7 @@ permalink: /about
 <div align="justify">
     <table >
      <tr>
-        <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="100%"></td>
+        <td><img src="assets/profile.png" alt="profile photo of Tiffany Funk" width="100%"></td>
 
 <td><p align="left"><b>Tiffany Funk</b> is a writer, scholar, and artist whose work moves across sound, archives, and the feedback systems that shape attention. She holds a PhD in art history and an MFA in new media, and is Visiting Assistant Professor at the University of Illinois Chicago, where she teaches in the Interdisciplinary Education in the Arts (IDEA) program she co-developed.</p>
 
