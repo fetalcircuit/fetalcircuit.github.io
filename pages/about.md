@@ -5,7 +5,7 @@ permalink: /about
 ---
 
 <html>
-<div align="center">
+<div align="justify">
     <table >
      <tr>
         <td><img src="assets/profile.jpg" alt="profile photo of Tiffany Funk" width="100%"></td>
