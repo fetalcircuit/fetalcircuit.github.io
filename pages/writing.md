@@ -15,7 +15,18 @@ image: blackbox_header.png
 </figure></a></html>
 <br>
 
-### Selected bibliography:
+### Books  
+
+#### HPSCHD: Inside John Cage and Lejaren A. Hiller Jr.'s Radical Multimedia Collaboration  
+Forthcoming, University of Illinois Press. The first sustained study of Cage and Hiller's 1969 multimedia work, drawing on archival research to read HPSCHD as a foundational moment in the history of human-machine collaboration: programming as performance, code as score, listening as a practice of inhabiting systems too large to hold whole.
+
+#### Haunted Circuits and Sounding Care  
+*In progress*. A study of feedback as care infrastructure across sound art, clinical practice, and digital platforms, from medieval chant to contemporary streaming. The book argues that the same formal grammar of cue, threshold, and return can hold attention in care or harvest it for capital, and listens for the difference.
+
+#### Montauk  
+A novel. A sound archivist restoring damaged wax cylinders discovers that her recordings are connected to a sonic practice from the 1970s — and that her late mother was once part of it. Currently complete; representation queries welcome.
+
+### Essays / Articles  
 
 ["Resident Aliens: A Brief History of Videogames and Fine Art," *ArtReview*, March 2024.](https://artreview.com/resident-aliens-a-brief-history-of-videogames-and-fine-art/)
 
