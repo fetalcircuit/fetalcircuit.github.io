@@ -14,18 +14,21 @@ Poetry, fiction, and hybrid works for the page and the browser.
 A prayer unfolds through a social-media dashboard. Reblogging carries the poem forward through advertising, interruptions, and the demands of the platform.
 
 <!-- Add the reading link after publishing the HTML piece at /writing/our-tumblr/. -->
+[Read “Our Tumblr” &rarr;]({{ '/writing/our-tumblr.html' | relative_url }})
 
 ### The Signal
 
 A haunted transmission unfolds through code, trapped voices, and choices addressed to the reader. Sound is optional.
 
 <!-- Add the reading link after publishing the HTML piece at /writing/the-signal/. -->
+[Enter “The Signal” &rarr;]({{ '/writing/the-signal.html' | relative_url }})
 
 ### remediation — a duet
 
 A poem and the machine that “improves” it. Moving a slider expands superlatives and strikes through the poem’s bodily language; the reader controls the transformation.
 
 <!-- Add the reading link after publishing the HTML piece at /writing/remediation/. -->
+[Read “remediation — a duet” &rarr;]({{ '/writing/remediation.html' | relative_url }})
 
 ## Published poetry & fiction
 
@@ -37,7 +40,7 @@ Newly published poem in *Malefica Press*.
 
 ### cat.exe
 
-Newly published in *Unstable Realities*, an anthology from *GossamerWight*.
+Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
 
 [Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
 
@@ -94,5 +97,4 @@ Forthcoming March 2, 2027, University of Illinois Press. [Publisher information]
 > In 1956, Lejaren A. Hiller, Jr., and Leonard Isaacson debuted the Illiac Suite, the first score composed with a computer. Its reception anticipated Hiller’s embattled career as an experimental composer. Though the Suite is an influential work of modern electronic music, Hiller’s accomplishment in computational experimentation is above all an impressive feat of postwar conceptual performance art. A reexamination of theoretical and methodological processes resulting in the Illiac Suite reveals a conceptual and performative emphasis reflecting larger trends in the experimental visual arts of the 1950s and 1960s, illuminating his eventual collaborations with John Cage and establishing his legacy in digital art practices.
 
 The Chapter "Dirty your Media: Artists’ Experiments in Bio-Sovereignty" is available in [The Aesthetics of Necropolitics,](https://rowman.com/ISBN/9781786606853/The-Aesthetics-of-Necropolitics) a volume edited by Natasha Lushetich. It is part of the series Experiments/On the Political, published by Rowman and Littlefield International.
-
 
