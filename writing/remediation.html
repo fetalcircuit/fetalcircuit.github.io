@@ -1,0 +1,335 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>remediation — a duet</title>
+<style>
+  :root{
+    --bg-top:#0c0c14; --bg-bot:#060710;
+    --flesh: rgb(232,206,188);   /* the tender / body warmth   */
+    --gold:  rgb(255,214,150);   /* superlatives, intensified  */
+    --machine: rgb(150,205,255); /* the fluent machine voice   */
+    --frame: rgb(150,144,134);
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;
+    background:#050509;color:#8aa;
+    font:15px/1.5 "Helvetica Neue",Arial,sans-serif}
+  #wrap{min-height:100%;display:flex;flex-direction:column;align-items:center;
+    gap:16px;padding:16px 0 26px}
+
+  /* the broadcast field ---------------------------------------------------- */
+  #stage{position:relative;width:min(720px,92vw);height:min(760px,80vh);
+    display:flex;align-items:center;justify-content:center;overflow:hidden;
+    background:linear-gradient(var(--bg-top),var(--bg-bot));
+    border:1px solid #14161f;border-radius:3px;cursor:pointer;user-select:none}
+  #stage::after{content:"";position:absolute;inset:0;pointer-events:none;
+    background:repeating-linear-gradient(rgba(0,0,0,.10) 0 1px,transparent 1px 3px),
+      radial-gradient(120% 90% at 50% 45%,transparent 55%,rgba(0,0,0,.55) 100%)}
+
+  #poem{text-align:center;transform-origin:center;padding:0 24px}
+  .line{margin:.28em 0;letter-spacing:.005em}
+  .word{white-space:pre}
+
+  .frame .word{color:var(--frame)}
+  .super .base .word{font-weight:700;color:var(--gold)} /* recolored live in JS */
+
+  /* the tender lines, redacted in place ------------------------------------ */
+  .body .live{white-space:pre;color:var(--flesh)}
+  .body .ch{transition:opacity .45s ease,text-decoration-color .45s ease}
+  .body .ch.eaten{opacity:.30;text-decoration:line-through;
+    text-decoration-color:rgba(232,206,188,.5)}
+
+  /* the machine materializing ---------------------------------------------- */
+  .mach{color:var(--machine)}
+  .mach .phrase{opacity:0;filter:blur(7px);margin-left:.30em;
+    transition:opacity .55s ease,filter .55s ease}
+  .mach .phrase.on{opacity:1;filter:blur(0)}
+  @media (prefers-reduced-motion:no-preference){
+    .mach .phrase.on{animation:breathe 3.6s ease-in-out infinite}
+  }
+  @keyframes breathe{0%,100%{opacity:.72}50%{opacity:1}}
+
+  .target .us{font-weight:700;color:var(--flesh);display:inline-block;
+    transition:color .3s ease}
+  .target.shout .us{letter-spacing:.06em}
+
+  /* controls (real DOM, keyboard-accessible) ------------------------------- */
+  #controls{width:min(720px,92vw);display:flex;flex-direction:column;gap:7px}
+  #ctlrow{display:flex;align-items:center;gap:12px}
+  #slider{flex:1;accent-color:#7fb4e8;height:22px;cursor:pointer}
+  #ends{display:flex;justify-content:space-between;font-size:11px;
+    letter-spacing:.09em;color:#5a6472;text-transform:uppercase}
+  #meta{display:flex;justify-content:space-between;font-size:11px;
+    letter-spacing:.09em;color:#54606f;text-transform:uppercase}
+  button{background:#0d0d16;color:#8aa;border:1px solid #23283a;padding:6px 13px;
+    font:inherit;letter-spacing:.05em;cursor:pointer;border-radius:2px}
+  button:hover{border-color:#3a4560;color:#cdd}
+  button:focus-visible,#slider:focus-visible{outline:2px solid #7fb4e8;outline-offset:2px}
+  #hint{text-align:center;font-size:12px;color:#8a94a5;
+    pointer-events:none;transition:opacity .3s;min-height:1em}
+</style>
+</head>
+<body>
+<div id="wrap">
+  <div id="stage">
+    <div id="poem"></div>
+  </div>
+  <div id="hint">click anywhere on the field — or drag the slider — to optimize this poem</div>
+  <div id="controls">
+    <div id="ctlrow">
+      <input id="slider" type="range" min="0" max="1000" value="0" step="1"
+             aria-label="Remediation amount">
+      <button id="reroll">re-roll</button>
+      <button id="reset">reset</button>
+    </div>
+    <div id="ends"><span>as written</span><span>fully optimized</span></div>
+    <div id="meta"><span id="readout">remediation 0%</span>
+      <span>R reset · N re-roll</span></div>
+  </div>
+</div>
+
+<script>
+/* ============================================================
+   REMEDIATION — a duet between a poem and the machine that
+   "improves" it. The whole poem lives in the DOM as spans.
+   Drag the slider (or click the field) and the tender, specific
+   lines are struck through in place while the machine's
+   superlatives materialize, escalating as you push further,
+   until everything is ALL OF US.
+
+   The "optimized" voice is now GENERATED from a small grammar
+   (see CONFIG.lexicon) rather than a fixed list, so it never
+   repeats the same way twice. Re-roll for a fresh take; set a
+   numeric CONFIG.seed to lock one version for submission.
+   ============================================================ */
+
+const CONFIG = {
+  // k = kind:  'frame' (held) · 'super' (blooms) · 'body' (redacted) · 'target'
+  poem: [
+    { t: "Today of all days",                       k: "frame"  },
+    { t: "The most important of birthdays",          k: "super"  },
+    { t: "The best",                                 k: "super"  },
+    { t: "The biggest and best",                     k: "super"  },
+    { t: "They'll just get in there with the guys",  k: "body"   },
+    { t: "Just tear up pieces",                      k: "body"   },
+    { t: "Just sweaty and slipping",                 k: "body"   },
+    { t: "It's gonna be spectacular",                k: "super"  },
+    { t: "The best",                                 k: "super"  },
+    { t: "Today of all days",                        k: "frame"  },
+    { t: "Big winners",                              k: "super"  },
+    { t: "All of us",                                k: "target" },
+  ],
+
+  // HOW the machine talks. "generate" builds phrases from the lexicon below;
+  // "list" just samples the flat `amplifiers` array instead.
+  mode: "generate",
+
+  // parts the grammar assembles. Swap these to change the register entirely
+  // (e.g. corporate-LLM: "seamless","at scale","best-in-class"...).
+  lexicon: {
+    intensifiers: ["the most", "the single most", "by far the most", "the",
+                   "so very", "maybe the most"],
+    adjectives:   ["tremendous", "beautiful", "powerful", "important", "perfect",
+                   "historic", "incredible", "strong", "successful", "respected",
+                   "winning", "phenomenal"],
+    // unlocked only deeper into the remediation:
+    manic:        ["unbelievable", "record-breaking", "world-class",
+                   "like nothing you've ever seen",
+                   "the greatest in the history of the world", "biggest ever"],
+    nouns:        ["the best", "number one", "a total winner",
+                   "the greatest of all time", "a beautiful thing",
+                   "history in the making"],
+    tics:         ["believe me", "frankly", "like never before",
+                   "everybody's saying it", "nobody's ever seen anything like it",
+                   "people are crying", "tremendous crowds"],
+  },
+
+  // used only when mode === "list"
+  amplifiers: ["the best","the greatest","the biggest","the most tremendous",
+               "number one","record-breaking","unbelievable","believe me"],
+
+  seed: null,           // null = fresh randomness each load; a number = reproducible
+  maxSuperBloom: 8,     // phrases a super line can spawn
+  maxBodyOverwrite: 6,  // phrases written over a redacted body line
+  clickStep: 120,       // how far one field-click drags the slider (of 1000)
+  baseFont: 20,         // px; the poem scales down from here to fit the field
+  targetGrow: 1.5,
+};
+
+// live colors for the two elements that shift with remediation
+const C = { fleshRest:[226,218,205], flesh:[232,206,188],
+            gold:[255,214,150], us:[205,233,255] };
+
+const poemEl  = document.getElementById("poem");
+const stageEl = document.getElementById("stage");
+const slider  = document.getElementById("slider");
+const readout = document.getElementById("readout");
+const hintEl  = document.getElementById("hint");
+
+poemEl.style.fontSize = CONFIG.baseFont + "px";
+
+const words = s => s.split(/\s+/).filter(Boolean);
+const rgb   = a => "rgb(" + (a[0]|0) + "," + (a[1]|0) + "," + (a[2]|0) + ")";
+const lerp  = (a,b,t) => a + (b-a)*t;
+const lerp3 = (a,b,t) => [lerp(a[0],b[0],t),lerp(a[1],b[1],t),lerp(a[2],b[2],t)];
+const clamp = (x,a,b) => x<a?a:x>b?b:x;
+const smooth= x => (x=clamp(x,0,1), x*x*x*(x*(x*6-15)+10));
+
+/* ---- seeded RNG so a version is reproducible when you want it ------------- */
+let _seed = (CONFIG.seed == null ? (Date.now() >>> 0) : (CONFIG.seed >>> 0));
+function rand() {                      // mulberry32
+  _seed = (_seed + 0x6D2B79F5) | 0;
+  let t = Math.imul(_seed ^ (_seed >>> 15), 1 | _seed);
+  t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+  return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+}
+const pick = a => a[(rand() * a.length) | 0];
+
+/* ---- the generative "optimized" voice ------------------------------------ */
+// intensity 0..1 = how deep into the remediation this slot lives; higher =
+// more unhinged. This is what gives the machine escalating variety.
+function makePhrase(intensity) {
+  const Lx = CONFIG.lexicon;
+  const adj = () => pick(intensity > 0.55 ? Lx.adjectives.concat(Lx.manic)
+                                          : Lx.adjectives);
+  const roll = rand();
+  if (intensity < 0.4) {
+    return roll < 0.5 ? pick(Lx.intensifiers) + " " + adj() : pick(Lx.nouns);
+  } else if (intensity < 0.75) {
+    if (roll < 0.40) return pick(Lx.intensifiers) + " " + adj();
+    if (roll < 0.70) return adj() + ", so " + adj();
+    return pick(Lx.tics);
+  } else {
+    if (roll < 0.35) return adj() + ", so " + adj();
+    if (roll < 0.60) return pick(Lx.intensifiers) + " " + adj() + " — " + pick(Lx.tics);
+    if (roll < 0.80) return pick(Lx.tics) + ", " + pick(Lx.tics);
+    return adj() + " — " + pick(Lx.tics);
+  }
+}
+function phraseForSlot(intensity) {
+  return CONFIG.mode === "list" ? pick(CONFIG.amplifiers) : makePhrase(intensity);
+}
+
+/* ---- build the DOM once; keep references for cheap updates ---------------- */
+const L = CONFIG.poem.map((line, idx) => {
+  const el = document.createElement("div");
+  el.className = "line " + line.k;
+  const rec = { line, el, idx };
+
+  if (line.k === "frame") {
+    el.innerHTML = words(line.t).map(w => '<span class="word">'+w+' </span>').join("");
+
+  } else if (line.k === "super") {
+    const base = document.createElement("span"); base.className = "base";
+    base.innerHTML = words(line.t).map(w => '<span class="word">'+w+' </span>').join("");
+    const mach = makeMachSlots(CONFIG.maxSuperBloom);
+    el.appendChild(base); el.appendChild(mach.el);
+    rec.baseWords = base.querySelectorAll(".word");
+    rec.machSpans = mach.spans;
+
+  } else if (line.k === "body") {
+    const live = document.createElement("span"); live.className = "live";
+    rec.chars = [];
+    for (const c of line.t) {
+      const s = document.createElement("span"); s.className = "ch";
+      s.textContent = c; live.appendChild(s); rec.chars.push(s);
+    }
+    const mach = makeMachSlots(CONFIG.maxBodyOverwrite);
+    el.appendChild(live); el.appendChild(mach.el);
+    rec.machSpans = mach.spans;
+
+  } else if (line.k === "target") {
+    const us = document.createElement("span"); us.className = "us";
+    us.textContent = line.t; el.appendChild(us);
+    rec.us = us;
+  }
+  poemEl.appendChild(el);
+  return rec;
+});
+
+function makeMachSlots(n) {
+  const el = document.createElement("span"); el.className = "mach";
+  const spans = [];
+  for (let i = 0; i < n; i++) {
+    const p = document.createElement("span"); p.className = "phrase";
+    el.appendChild(p); spans.push(p);
+  }
+  return { el, spans };
+}
+
+// (re)generate every machine phrase from the current seed
+function fillPhrases() {
+  for (const rec of L) {
+    if (!rec.machSpans) continue;
+    const used = new Set();
+    const n = rec.machSpans.length;
+    rec.machSpans.forEach((p, i) => {
+      const intensity = n > 1 ? i / (n - 1) : 0.5;
+      let ph, tries = 0;
+      do { ph = phraseForSlot(intensity); tries++; } while (used.has(ph) && tries < 5);
+      used.add(ph); p.textContent = ph;
+    });
+  }
+}
+
+/* ---- update the poem to a remediation amount ----------------------------- */
+function update() {
+  const r = smooth((+slider.value) / 1000);
+  for (const rec of L) {
+    const k = rec.line.k;
+    if (k === "super") {
+      const cstr = rgb(lerp3(C.fleshRest, C.gold, r));
+      rec.baseWords.forEach(w => (w.style.color = cstr));
+      const n = Math.floor(r * CONFIG.maxSuperBloom);
+      rec.machSpans.forEach((p, i) => p.classList.toggle("on", i < n));
+
+    } else if (k === "body") {
+      const keep = Math.floor((1 - r) * rec.chars.length);
+      rec.chars.forEach((c, i) => c.classList.toggle("eaten", i >= keep));
+      let n = Math.floor(r * CONFIG.maxBodyOverwrite);
+      if (r > 0.05 && n === 0) n = 1;
+      rec.machSpans.forEach((p, i) => p.classList.toggle("on", i < n));
+
+    } else if (k === "target") {
+      rec.us.style.fontSize = (1 + r * CONFIG.targetGrow) + "em";
+      rec.us.style.color = rgb(lerp3(C.flesh, C.us, r));
+      rec.us.textContent = r > 0.25 ? rec.line.t.toUpperCase() : rec.line.t;
+      rec.el.classList.toggle("shout", r > 0.25);
+    }
+  }
+  fitToStage();
+  readout.textContent = "remediation " + Math.round(r * 100) + "%";
+  hintEl.style.opacity = clamp(1 - r / 0.04, 0, 1) * 0.85;
+}
+
+// scale the poem so blooming superlatives never overflow the field
+function fitToStage() {
+  poemEl.style.transform = "scale(1)";
+  const avail = stageEl.clientHeight - 40;
+  poemEl.style.transform = "scale(" + Math.min(1, avail / poemEl.scrollHeight) + ")";
+}
+
+function setValue(v) { slider.value = clamp(v, 0, 1000); update(); }
+function reroll() {
+  _seed = (CONFIG.seed == null ? (Date.now() >>> 0) : ((_seed + 0x9E3779B9) >>> 0));
+  fillPhrases(); update();
+}
+
+/* ---- interaction: the reader does the erasing ---------------------------- */
+slider.addEventListener("input", update);
+stageEl.addEventListener("pointerdown", () => setValue((+slider.value) + CONFIG.clickStep));
+document.getElementById("reset").onclick  = () => setValue(0);
+document.getElementById("reroll").onclick = reroll;
+window.addEventListener("keydown", e => {
+  if (e.key === "r" || e.key === "R") setValue(0);
+  if (e.key === "n" || e.key === "N") reroll();
+});
+window.addEventListener("resize", fitToStage);
+
+fillPhrases();
+update();
+</script>
+</body>
+</html>

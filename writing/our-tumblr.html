@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Our Tumblr</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;1,400&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+  color-scheme:light dark;
+  --bg:#dde4ec; --post:#ffffff; --ink:#15202e; --muted:#5b6a7d; --line:#cdd6e0;
+  --nav:#2b3440; --navink:#e9ecef; --reblog:#4f7a63; --ad:#e4dfd2; --adink:#3a3935; --hot:#8a4b44;
+  --serif:'EB Garamond', Garamond, 'Times New Roman', serif;
+  --ui:'Karla', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --loud:Impact, 'Arial Black', 'Helvetica Neue', sans-serif;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0b1628; --post:#16263f; --ink:#ecf1f7; --muted:#9aaac0; --line:#28395a;
+    --nav:#10161f; --reblog:#86ab96; --hot:#b98780; --ad:#2d2c28; --adink:#d2cdbf;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0b1628; --post:#16263f; --ink:#ecf1f7; --muted:#9aaac0; --line:#28395a;
+  --nav:#10161f; --reblog:#86ab96; --hot:#b98780; --ad:#2d2c28; --adink:#d2cdbf;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+html,body{margin:0}
+body{background:var(--bg);color:var(--ink);font-family:var(--ui);min-height:100%}
+button{font:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--hot);outline-offset:2px}
+
+header.bar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--nav);color:var(--navink);
+  display:flex;align-items:center;justify-content:space-between;padding:.75rem 1.1rem}
+.brand{font-weight:700;font-size:1.05rem}
+.bell{position:relative;font-size:1.15rem}
+.bell b{position:absolute;top:-.45rem;right:-.8rem;background:var(--hot);color:#fff;font-size:.7rem;border-radius:999px;
+  padding:.05rem .35rem;min-width:1.2rem;text-align:center}
+.bell b[hidden]{display:none}
+
+main{max-width:560px;margin:0 auto;padding:1.25rem .75rem 8rem}
+#feed{display:flex;flex-direction:column;gap:1rem;transition:filter .8s}
+#feed[data-stage="2"]{filter:grayscale(.25)}
+#feed[data-stage="3"]{filter:grayscale(.5) contrast(.95)}
+#feed[data-stage="4"],#feed.intense,#feed.settled{filter:grayscale(.8) contrast(.9) brightness(.97)}
+.hint{color:var(--muted);text-align:center;font-size:.9rem;margin:1rem 0 0}
+
+.post{background:var(--post);border-radius:8px;overflow:hidden;position:relative;scroll-margin-top:4.5rem}
+.post-head{display:flex;align-items:center;gap:.65rem;padding:.85rem 1.1rem .2rem}
+.avatar{width:2.3rem;height:2.3rem;border-radius:5px;display:grid;place-items:center;background:var(--bg);font-size:1.2rem;flex:none}
+.user{font-weight:700;font-size:.95rem}
+.via{color:var(--muted);font-size:.82rem}
+.post-body{position:relative;padding:.5rem 1.35rem 1rem;font-family:var(--serif);font-size:1.28rem;line-height:1.55}
+.post-body h2{font-family:var(--serif);font-weight:600;font-size:2rem;line-height:1.15;margin:.2rem 0 .6rem}
+.post-body p{margin:0}
+.tags{padding:0 1.35rem .85rem;display:flex;flex-wrap:wrap;gap:.2rem .7rem;color:var(--muted);font-size:.88rem}
+.actions{display:flex;align-items:center;gap:.35rem;border-top:1px solid var(--line);padding:.5rem .7rem .5rem 1.35rem}
+.notes{font-weight:700;font-size:.88rem;margin-right:auto}
+.act{background:none;border:0;color:var(--ink);padding:.5rem .75rem;border-radius:6px;font-weight:700}
+.act:hover:not(:disabled){background:var(--bg)}
+.act.reblog{color:var(--reblog)}
+.act:disabled{opacity:.45;cursor:not-allowed}
+.act.liked{color:var(--hot)}
+
+.aff{color:inherit;text-decoration:underline double var(--reblog);text-underline-offset:4px;cursor:pointer;background:none;border:0;padding:0;font:inherit}
+.aff::after{content:" 🛒";font-size:.6em;vertical-align:super}
+
+.sponsored{background:var(--ad);color:var(--adink);border-radius:8px;padding:1rem 1.3rem 1.2rem}
+.sponsored small{font-family:var(--ui);font-weight:700;display:block;margin-bottom:.35rem;font-size:.8rem}
+.sponsored p{font-family:var(--loud);font-size:1.7rem;line-height:1.05;margin:.1rem 0 .85rem}
+.sponsored button{background:var(--adink);color:var(--ad);border:0;padding:.6rem 1.1rem;border-radius:4px;font-weight:700}
+
+.walled{filter:blur(12px);opacity:.55;user-select:none;pointer-events:none;transition:filter .7s, opacity .7s}
+.revealed .walled{filter:none;opacity:1;user-select:auto;pointer-events:auto}
+.wallbox{position:relative;min-height:12rem;margin:0 -1.35rem;padding:0 1.35rem}
+.revealed .wallbox{min-height:0}
+.paywall{position:absolute;left:0;right:0;bottom:0;top:0;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  gap:.55rem;text-align:center;padding:1rem;font-family:var(--ui);font-size:1rem;line-height:1.35;
+  background:linear-gradient(to bottom, transparent, var(--post) 28%)}
+.paywall h3{margin:0;font-size:1.2rem}
+.paywall p{margin:0;color:var(--muted);max-width:30ch}
+.paywall .buy{background:var(--hot);color:#fff;border:0;border-radius:999px;padding:.75rem 1.5rem;font-weight:700;margin-top:.3rem}
+.paywall .cheap{background:none;border:0;color:var(--muted);font-size:.75rem;text-decoration:underline;padding:.3rem}
+
+.intense-line{font-weight:600}
+body.crusty::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:15;
+  background:repeating-linear-gradient(0deg, rgba(120,120,110,.05) 0 1px, transparent 1px 3px)}
+
+.cookie{position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--post);color:var(--ink);border-top:3px solid var(--nav);
+  padding:1rem 1rem calc(1rem + env(safe-area-inset-bottom,0px));display:flex;flex-wrap:wrap;gap:.8rem 1.2rem;align-items:center;justify-content:center;
+  transform:translateY(110%);transition:transform .35s;visibility:hidden}
+.cookie.show{transform:none;visibility:visible}
+.cookie p{margin:0;max-width:44ch;font-size:.95rem;line-height:1.4}
+.cookie .yes{background:var(--reblog);color:#fff;border:0;border-radius:6px;padding:.85rem 1.8rem;font-weight:700;font-size:1.05rem}
+.cookie .manage{background:none;border:0;color:var(--muted);font-size:.7rem;text-decoration:underline}
+
+.scrim{position:fixed;inset:0;z-index:40;background:rgba(5,12,24,.62);display:grid;place-items:center;padding:1rem}
+.scrim[hidden]{display:none}
+.modal{background:var(--post);color:var(--ink);border-radius:10px;max-width:420px;width:100%;padding:1.3rem 1.3rem 1.1rem}
+.modal h3{margin:0 0 .5rem;font-size:1.2rem}
+.modal .row{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.5rem 0;border-bottom:1px solid var(--line);font-size:.95rem}
+.modal input{width:1.2rem;height:1.2rem;accent-color:var(--reblog)}
+.modal .save{margin-top:1rem;width:100%;background:var(--nav);color:var(--navink);border:0;border-radius:6px;padding:.75rem;font-weight:700}
+.modal .msg{min-height:1.3em;margin:.6rem 0 0;color:var(--hot);font-weight:700;font-size:.9rem}
+
+.interstitial{position:fixed;inset:0;z-index:50;background:var(--ad);color:var(--adink);display:flex;flex-direction:column;
+  align-items:center;justify-content:center;gap:1rem;text-align:center;padding:2rem}
+.interstitial[hidden]{display:none}
+.interstitial .tag{position:absolute;top:calc(1rem + env(safe-area-inset-top,0px));left:1rem;font-weight:700;font-size:.8rem}
+.interstitial .big{font-family:var(--loud);font-size:clamp(2.6rem,11vw,5.6rem);line-height:.95;margin:0;max-width:12ch}
+.interstitial .small{font-weight:700;margin:0;max-width:34ch}
+.interstitial .skip{position:absolute;right:1rem;bottom:calc(1rem + env(safe-area-inset-bottom,0px));background:var(--adink);color:var(--ad);
+  border:0;border-radius:4px;padding:.75rem 1.1rem;font-weight:700}
+.interstitial .skip:disabled{opacity:.6;cursor:wait}
+
+.banner{position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--hot);color:#fff;display:flex;align-items:center;justify-content:center;
+  flex-wrap:wrap;gap:.4rem .9rem;padding:.7rem 3rem calc(.7rem + env(safe-area-inset-bottom,0px)) 1rem;font-family:var(--loud);font-size:1.1rem;text-align:center}
+.banner[hidden]{display:none}
+.banner .engage{font-family:var(--ui);font-weight:700;background:#fff;color:var(--hot);border:0;border-radius:4px;padding:.4rem .8rem}
+.banner .x{position:absolute;right:.5rem;top:.35rem;background:none;border:0;color:#fff;font-size:.8rem;opacity:.7;padding:.3rem}
+
+.pop{position:fixed;z-index:45;width:min(300px,86vw);background:var(--post);color:var(--ink);border:2px solid var(--ink);
+  box-shadow:6px 6px 0 var(--hot);border-radius:6px;padding:.9rem 1rem .85rem}
+.pop .x{position:absolute;top:.15rem;right:.25rem;background:none;border:0;font-size:1.25rem;color:var(--muted);padding:.2rem .45rem}
+.pop h4{margin:0 1.6rem .3rem 0;font-size:1rem}
+.pop p{margin:0 0 .75rem;font-size:.92rem;line-height:1.35}
+.pop .row{display:flex;gap:.5rem}
+.pop .row button{flex:1;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:5px;padding:.55rem;font-weight:700}
+
+.dead{position:fixed;inset:0;z-index:60;background:var(--bg);display:grid;place-items:center;padding:1.5rem}
+.dead[hidden]{display:none}
+.dead .card{max-width:440px;width:100%;background:var(--post);border-radius:10px;padding:1.8rem}
+.dead h2{font-size:1.7rem;margin:0 0 .6rem}
+.dead p{line-height:1.5;margin:0 0 1rem}
+.dead .btns{display:flex;flex-wrap:wrap;gap:.6rem}
+.dead .btns button{border:0;border-radius:6px;padding:.7rem 1.1rem;font-weight:700}
+.dead .appeal{background:var(--nav);color:var(--navink)}
+.dead .again{background:var(--bg);color:var(--ink)}
+.dead .msg{color:var(--hot);font-weight:700;min-height:1.4em;margin-top:1rem}
+.blink{animation:blink 1s steps(1,end) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.toast{position:fixed;left:50%;top:calc(4rem + env(safe-area-inset-top,0px));transform:translate(-50%,-20px);z-index:70;background:var(--nav);color:var(--navink);
+  padding:.65rem 1rem;border-radius:6px;font-weight:700;font-size:.92rem;opacity:0;pointer-events:none;transition:opacity .25s, transform .25s;max-width:90vw;text-align:center}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+@media (prefers-reduced-motion: reduce){
+  .cookie,.toast,.walled,#feed{transition:none}
+}
+</style>
+</head>
+<body>
+<header class="bar">
+  <span class="brand">dashboard</span>
+  <span class="bell" aria-label="Notifications">🔔<b id="bellCount" hidden>0</b></span>
+</header>
+
+<main>
+  <div id="feed" data-stage="0"></div>
+  <p class="hint" id="hint">Reblog to continue the prayer.</p>
+</main>
+
+<div class="cookie" id="cookie" role="dialog" aria-label="Cookie consent">
+  <p>We value your privacy, which is why we would like to collect all of it.</p>
+  <button class="yes" id="cookieYes">Accept all</button>
+  <button class="manage" id="cookieManage">Manage preferences</button>
+</div>
+
+<div class="scrim" id="prefs" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="prefsTitle">
+    <h3 id="prefsTitle">Your privacy choices</h3>
+    <label class="row">Strictly necessary <input type="checkbox" checked disabled></label>
+    <label class="row">Vibes-based advertising <input type="checkbox"></label>
+    <label class="row">Selling your identifying information to train something <input type="checkbox"></label>
+    <label class="row">Legitimate interest (ours) <input type="checkbox"></label>
+    <label class="row">Legitimate interest (our partners') <input type="checkbox"></label>
+    <button class="save" id="prefsSave">Save my choices</button>
+    <p class="msg" id="prefsMsg" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="interstitial" id="ad" hidden role="dialog" aria-modal="true" aria-label="Advertisement">
+  <span class="tag" id="adTag">Ad 1 of 1</span>
+  <p class="small" id="adPre">This prayer is brought to you by</p>
+  <p class="big" id="adBig">DAILY BREAD™ now with AI</p>
+  <p class="small" id="adPost">Prayer, one crumb at a time.</p>
+  <button class="skip" id="skip" disabled>Skip in 5</button>
+</div>
+
+<div class="banner" id="banner" hidden>
+  <span>🔥 3 people near you are wrong online</span>
+  <button class="engage" id="engage">Engage</button>
+  <button class="x" id="bannerX" aria-label="Close ad">✕</button>
+</div>
+
+<div class="dead" id="dead" hidden>
+  <div class="card" role="dialog" aria-modal="true" aria-labelledby="deadTitle">
+    <h2 id="deadTitle" tabindex="-1">Account terminated</h2>
+    <p>Your account has been permanently suspended for violating our Community Guidelines.</p>
+    <p id="deadPosts">All your posts, reblogs, drafts, and queued prayers have been removed.</p>
+    <div class="btns">
+      <button class="appeal" id="appeal">Submit an appeal</button>
+      <button class="again" id="again">Make a new account</button>
+    </div>
+    <p class="msg" id="deadMsg" aria-live="polite"></p>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+const posts = [
+  { user:'our-father-who-art-online', avatar:'🙏', title:'Our Tumblr',
+    lines:['which is thine heaven,','followed be thy fame.','Thy kingdom run, thy servers done,','online as it is IRL.'],
+    tags:['#thispoemwillbecringeinanhour','#prayer','#dashboard liturgy'], notes:1203 },
+  { user:'queue-rose-again', avatar:'🪦',
+    lines:['Was it Yahoo or Verizon or Meta (?)','GenZ suffered #unalived #buried,','and on the third day (or week or year? What is time?)','the queue rose again','because DeviantArt and AO3 wanted a thruple','and Gen Alpha got bored of Italian brainrot.'],
+    tags:['#what is time','#rip','#it was automattic actually','#op knows'], notes:48211 },
+  { user:'daily-flame-war', avatar:'🔥', reblogLabel:'Reblog (2 free left today)',
+    lines:['Give us this day our daily <button class="aff" type="button">flame war</button>,','and forgive us our rules 34, 63,','and forgive 4chan its trespasses (into infinitechan).'],
+    tags:['#discourse','#do not reblog','#reblogged'], notes:212904 },
+  { user:'pivot-to-video', avatar:'📉', reblogLabel:'Reblog (last free one)', wall:2,
+    lines:['And lead us not into enshittification','(though we know we will follow regardless)','for thine is the VC funding','and the pivot','and the inevitable decline','<span class="intense-line">enshittification intensifies</span>'],
+    tags:['#sponsored','#premium','#promoted'], notes:9807 },
+  { user:'lifetime-banned', avatar:'⛔', final:true,
+    lines:['Asian Bikini Bar to QAnon to lifetime ban,','Amen.'],
+    tags:['#this post has been flagged'], notes:12 }
+];
+
+const $ = id => document.getElementById(id);
+const feed = $('feed');
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+let stage = 0, bell = 0, toastTimer, crumbs = false;
+const AD_DEFAULT = { tag:'Ad 1 of 1', pre:'This prayer is brought to you by', big:'DAILY BREAD™ now with AI', post:'Prayer, one crumb at a time.' };
+function setAd(c){ $('adTag').textContent = c.tag; $('adPre').textContent = c.pre; $('adBig').textContent = c.big; $('adPost').textContent = c.post; }
+const shareWord = () => crumbs ? 'Crumb' : 'Reblog';
+
+function toast(msg){
+  const t = $('toast'); t.textContent = msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer = setTimeout(()=>t.classList.remove('show'), 2800);
+}
+function bumpBell(n){
+  bell += n; const b = $('bellCount'); b.textContent = bell > 99 ? '99+' : bell; b.hidden = bell === 0;
+}
+function lastBtn(){ const all = feed.querySelectorAll('article.post .reblog'); return all[all.length-1]; }
+function setLock(v){ const b = lastBtn(); if (b) b.disabled = v; }
+function show(el){ el.scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'start'}); }
+
+function renderPost(i){
+  const p = posts[i];
+  const art = document.createElement('article');
+  art.className = 'post'; art.id = 'post' + i;
+  const ps = arr => arr.map(l => `<p>${l}</p>`).join('');
+  let body = p.title ? `<h2>${p.title}</h2>` : '';
+  if (p.wall){
+    body += ps(p.lines.slice(0, p.wall)) +
+      `<div class="wallbox"><div class="walled" aria-hidden="true">${ps(p.lines.slice(p.wall))}</div>` +
+      `<div class="paywall"><h3>You've read your free stanzas.</h3><p>Keep praying with Premium. Salvation starts at $4.99/mo.</p>
+       <button class="buy" type="button">Subscribe to Premium</button>
+       <button class="cheap" type="button">Continue with ads</button></div></div>`;
+  } else body += ps(p.lines);
+  const btn = p.final
+    ? `<button class="act reblog" type="button">Amen</button>`
+    : `<button class="act reblog" type="button">${crumbs ? '🍞' : '⟲'} ${(p.reblogLabel || 'Reblog').replace('Reblog', shareWord())}</button>`;
+  art.innerHTML = `
+    <div class="post-head"><div class="avatar" aria-hidden="true">${p.avatar}</div>
+      <div><div class="user">${p.user}</div>${i ? `<div class="via">${crumbs ? 'crumbed' : 'reblogged'} from ${posts[i-1].user}</div>` : ''}</div></div>
+    <div class="post-body">${body}</div>
+    <div class="tags">${p.tags.map(t => `<span>${t}</span>`).join('')}</div>
+    <div class="actions"><span class="notes">${p.notes.toLocaleString()} notes</span>
+      <button class="act like" type="button" aria-pressed="false" aria-label="Like">♡</button>${btn}</div>`;
+  feed.appendChild(art);
+  const like = art.querySelector('.like');
+  like.onclick = () => { const on = like.classList.toggle('liked'); like.textContent = on ? '♥' : '♡'; like.setAttribute('aria-pressed', on); };
+  art.querySelector('.reblog').onclick = p.final ? terminate : advance;
+  art.querySelectorAll('.aff').forEach(a => a.onclick = () => toast('Flame war added to cart.'));
+  if (p.wall){
+    art.querySelector('.buy').onclick = () => toast("Payment declined. Prayers aren't a supported currency.");
+    art.querySelector('.cheap').onclick = () => runAd(art);
+  }
+  return art;
+}
+
+function sponsored(){
+  const a = document.createElement('aside');
+  a.className = 'sponsored';
+  a.innerHTML = `<small>Sponsored</small><p>DAILY BREAD™: Prayer, one crumb at a time.</p><button type="button">Learn more</button>`;
+  a.querySelector('button').onclick = () => toast('There is nothing more to learn.');
+  return a;
+}
+
+function advance(){
+  const b = lastBtn(); b.disabled = true; b.textContent = crumbs ? '✓ Crumbed' : '✓ Reblogged';
+  $('hint').hidden = true;
+  stage++; feed.dataset.stage = stage;
+  bumpBell(stage * stage * 3);
+  if (stage === 1){
+    show(renderPost(1)); setLock(true);
+    setTimeout(() => $('cookie').classList.add('show'), 800);
+  } else if (stage === 2){
+    feed.appendChild(sponsored());
+    show(renderPost(2));
+    setTimeout(() => $('banner').hidden = false, 600);
+  } else if (stage === 3){
+    show(renderPost(3)); setLock(true);
+    $('banner').hidden = false;
+  } else if (stage === 4){
+    show(renderPost(4));
+    $('banner').hidden = false;
+  }
+}
+
+function closeCookie(msg){
+  $('cookie').classList.remove('show'); setLock(false); if (msg) toast(msg);
+}
+$('cookieYes').onclick = () => closeCookie('Cookies accepted. All 847 of them.');
+$('cookieManage').onclick = () => { $('prefs').hidden = false; $('prefsSave').focus(); };
+$('prefsSave').onclick = () => {
+  document.querySelectorAll('#prefs input').forEach(i => i.checked = true);
+  $('prefsMsg').textContent = 'Saved. We respected your choices by ignoring them.';
+  $('prefsSave').disabled = true;
+  setTimeout(() => { $('prefs').hidden = true; $('prefsSave').disabled = false; $('prefsMsg').textContent = ''; closeCookie(); }, 1800);
+};
+
+$('engage').onclick = () => toast('You are now in a flame war.');
+$('bannerX').onclick = () => $('banner').hidden = true;
+
+function runAd(art){
+  const ad = $('ad'), skip = $('skip'); let n = 5;
+  setAd(AD_DEFAULT);
+  ad.hidden = false; skip.disabled = true; skip.textContent = `Skip in ${n}`;
+  const t = setInterval(() => {
+    n--;
+    if (n > 0) skip.textContent = `Skip in ${n}`;
+    else { clearInterval(t); skip.disabled = false; skip.textContent = 'Skip ad ⏭'; skip.focus(); }
+  }, 1000);
+  skip.onclick = () => {
+    // "Skipping" only gets you the announcement.
+    setAd({ tag:'A message from our partners', pre:'Exciting news! In partnership with DAILY BREAD™,',
+      big:'ALL REBLOGS ARE NOW CRUMBS™', post:'Every reblog is a crumb. Every crumb is a prayer. Pray responsibly.' });
+    skip.textContent = 'Got it 🍞';
+    skip.onclick = () => { ad.hidden = true; crumbify(); finish(); };
+    skip.focus();
+  };
+  function finish(){
+    art.classList.add('revealed');
+    art.querySelector('.paywall').remove();
+    art.querySelector('.walled').removeAttribute('aria-hidden');
+    art.querySelector('.intense-line').scrollIntoView({behavior: reduced ? 'auto' : 'smooth', block:'center'});
+    setTimeout(intensify, 1100);
+  }
+}
+
+function crumbify(){
+  crumbs = true;
+  const b = lastBtn();
+  if (b) b.textContent = '🍞 Crumb (last free one)';
+  feed.querySelectorAll('.via').forEach(v => v.textContent = v.textContent.replace('reblogged', 'crumbed'));
+  $('deadPosts').textContent = 'All your posts, crumbs, drafts, and queued prayers have been removed.';
+}
+
+const popDefs = [
+  { h:'Allow notifications?', p:'Get alerted every time someone is blocks you.', b:['Allow','Block'] },
+  { h:'The app is better', p:'Continue in the app for the full prayer experience.', b:['Open app','Not now'] },
+  { h:'AI summary of this post', p:'Person is sad about website. Was this helpful?', b:['👍','👎'] },
+  { h:'Rate your dashboard', p:'★★★★★', b:['Submit 5 stars'] },
+  { h:'Wait, before you go', p:'Here are 14 blogs you might like.', b:['Follow all','No thanks'] },
+  { h:'Your profile is 12% complete', p:'Add a phone number to keep your account safe from sinners.', b:['Add number','Later'] },
+  { h:'Are you still there?', p:'Your session will expire unless you engage.', b:["I'm here"] },
+  { h:'We miss you already', p:"You haven't posted in 40 seconds.", b:['Post something','Leave me alone'] }
+];
+function intensify(){
+  feed.classList.add('intense'); document.body.classList.add('crusty');
+  bumpBell(66);
+  const queue = popDefs.slice();
+  let open = 0, slot = 0;
+  const step = innerWidth < 640 ? 14 : 28;
+  function spawn(){
+    const d = queue.shift(); if (!d) return;
+    const k = slot++ % 6; open++;
+    const el = document.createElement('div');
+    el.className = 'pop'; el.setAttribute('role','dialog'); el.setAttribute('aria-label', d.h);
+    el.innerHTML = `<button class="x" type="button" aria-label="Close">×</button><h4>${d.h}</h4><p>${d.p}</p>
+      <div class="row">${d.b.map(t => `<button type="button">${t}</button>`).join('')}</div>`;
+    el.style.top = `calc(12vh + env(safe-area-inset-top,0px) + ${k * step}px)`;
+    el.style.left = `calc(50% - min(150px,43vw) - ${2.5 * step}px + ${k * step}px)`;
+    document.body.appendChild(el);
+    el.querySelectorAll('button').forEach(b => b.onclick = () => {
+      el.remove(); open--; bumpBell(1);
+      if (queue.length) setTimeout(spawn, 150);
+      else if (open === 0){ setLock(false); toast('Thanks for your engagement.'); }
+    });
+  }
+  for (let i = 0; i < 4; i++) setTimeout(spawn, 400 + i * 110);
+}
+
+function terminate(){
+  document.querySelectorAll('.pop').forEach(p => p.remove());
+  $('banner').hidden = true;
+  $('dead').hidden = false; $('deadTitle').focus();
+}
+$('appeal').onclick = () => { $('deadMsg').innerHTML = 'Appeal received. Estimated review time: <span class="blink">loading</span>'; };
+$('again').onclick = reset;
+
+function reset(){
+  stage = 0; bell = 0; bumpBell(0); crumbs = false;
+  $('deadPosts').textContent = 'All your posts, reblogs, drafts, and queued prayers have been removed.';
+  feed.innerHTML = ''; feed.dataset.stage = 0; feed.className = '';
+  document.body.classList.remove('crusty');
+  $('dead').hidden = true; $('deadMsg').textContent = '';
+  $('banner').hidden = true; $('hint').hidden = false;
+  document.querySelectorAll('#prefs input:not([disabled])').forEach(i => i.checked = false);
+  renderPost(0);
+  scrollTo(0, 0);
+}
+
+reset();
+</script>
+</body>
+</html>

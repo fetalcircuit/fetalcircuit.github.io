@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>body{margin:0}</style>
+<title>The Signal</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=Major+Mono+Display&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: one CRT set in a dark room. The screen is the poem; the bezel holds the only controls. Single dark look by design. */
+:root{
+  --room:#06070b;
+  --bezel:#15161b;
+  --bezel-edge:#25262d;
+  --screen:#02040a;
+  --phos:#a6bfff;          /* blue, but wrong */
+  --dim:#4a587b;
+  --white:#f2f4ff;
+  --red:#ff4d4d;
+  --yellow:#f3d24c;
+  --magenta:#d963ff;
+  --cyan:#57e3e3;
+  --green:#62ff8f;
+  --void:#0c0f18;          /* ANSI 30: black on black */
+  --f-screen:'VT323', ui-monospace, 'Courier New', monospace;
+  --f-mast:'Major Mono Display', ui-monospace, 'Courier New', monospace;
+  --f-ui:'IBM Plex Mono', ui-monospace, Menlo, Consolas, monospace;
+  color-scheme:dark;
+}
+html,body{background:var(--room);color:var(--phos)}
+body{font-family:var(--f-ui)}
+.wrap{max-width:880px;margin:0 auto;padding-inline:16px;padding-block:28px 44px;display:grid;gap:18px}
+.mast{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 18px}
+.mast h1{font-family:var(--f-mast);font-weight:400;font-size:clamp(1.5rem,4vw,2.3rem);letter-spacing:.04em;margin:0;color:var(--white);text-wrap:balance}
+.mast p{font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--dim);margin:0}
+
+.tv{background:linear-gradient(170deg,var(--bezel-edge),var(--bezel) 40%);border-radius:30px;padding:clamp(12px,3vw,26px);box-shadow:0 40px 90px rgba(0,0,0,.65),inset 0 1px 0 rgba(255,255,255,.06)}
+.screen{position:relative;height:min(66vh,560px);min-height:340px;background:var(--screen);border-radius:24px/20px;overflow:hidden;box-shadow:0 0 0 2px #000,0 0 40px rgba(110,140,255,.08)}
+.inner{position:absolute;inset:0;transform-origin:center}
+#static{position:absolute;inset:0;width:100%;height:100%;image-rendering:pixelated;opacity:.07;pointer-events:none;z-index:1}
+.out{position:absolute;inset:0;z-index:2;overflow-y:auto;padding:22px clamp(16px,3.5vw,30px) 34px;font-family:var(--f-screen);font-size:clamp(1.08rem,2.5vw,1.4rem);line-height:1.22;white-space:pre-wrap;overflow-wrap:anywhere;color:var(--phos);text-shadow:0 0 6px rgba(140,170,255,.45);scrollbar-width:thin;scrollbar-color:var(--dim) transparent;transition:color 2s}
+.out.joined{color:var(--yellow);text-shadow:0 0 8px rgba(243,210,76,.5)}
+#shadow{position:absolute;inset:0;width:100%;height:100%;z-index:3}
+.freeze{position:absolute;inset:0;z-index:4;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.4em;text-align:center;padding-inline:16px;font-family:var(--f-screen);color:var(--white);pointer-events:none}
+.freeze b{font-weight:400;font-size:clamp(1.6rem,6vw,3rem);background:var(--screen);padding:0 .3em;text-shadow:2px 0 var(--red),-2px 0 var(--cyan)}
+.freeze span{font-size:clamp(1.1rem,3.5vw,1.6rem);background:var(--screen);padding:0 .3em;color:var(--red)}
+.scan{position:absolute;inset:0;z-index:5;pointer-events:none;background:repeating-linear-gradient(to bottom,transparent 0 2px,rgba(0,0,0,.3) 2px 3px)}
+.glass{position:absolute;inset:0;z-index:6;pointer-events:none;background:radial-gradient(ellipse at 30% 18%,rgba(255,255,255,.06),transparent 40%),radial-gradient(ellipse at center,transparent 55%,rgba(0,0,0,.75) 100%);animation:hz 1.7s steps(2) infinite}
+@keyframes hz{50%{opacity:.9}}
+.flash{position:absolute;inset:0;z-index:7;pointer-events:none;background:var(--red);opacity:0}
+.flash.go{animation:flash .5s ease-out}
+@keyframes flash{0%{opacity:.45}100%{opacity:0}}
+.screen.shake .inner{animation:shake .45s linear}
+@keyframes shake{20%{transform:translate(-4px,2px) skewX(2deg)}40%{transform:translate(5px,-1px)}60%{transform:translate(-3px,-2px) skewX(-3deg)}80%{transform:translate(2px,1px)}}
+.inner.off{animation:crtoff 1.3s cubic-bezier(.6,0,.9,.4) forwards}
+@keyframes crtoff{0%{transform:scale(1,1);filter:brightness(1)}55%{transform:scale(1,.006);filter:brightness(4)}100%{transform:scale(0,.006);filter:brightness(0)}}
+.inner.on{animation:crton .7s ease-out}
+@keyframes crton{0%{transform:scale(1,.006);filter:brightness(4)}100%{transform:scale(1,1);filter:brightness(1)}}
+
+.ln{min-height:1.22em}
+.lab{white-space:pre}
+.red{color:var(--red)}.yellow{color:var(--yellow)}.magenta{color:var(--magenta)}.cyan{color:var(--cyan)}.green{color:var(--green)}
+.inv{background:var(--red);color:#000;text-shadow:none;padding:0 .25em}
+.void{color:var(--void);text-shadow:none}
+.void::selection{color:var(--white);background:var(--red)}
+.dim{color:var(--dim);text-shadow:none}
+.bright{color:var(--white)}
+.ask{display:flex;flex-wrap:wrap;align-items:baseline;gap:.2em .6em;margin-top:.2em}
+.ask input{width:5ch;background:transparent;border:0;border-bottom:1px solid var(--phos);color:var(--white);font:inherit;text-transform:uppercase;padding:0 .1em;caret-color:var(--white)}
+.ask input:focus{outline:none;border-bottom-color:var(--white);box-shadow:0 2px 0 var(--white)}
+.chip{font:inherit;line-height:1.1;background:transparent;color:var(--phos);border:1px solid currentColor;padding:.05em .55em;cursor:pointer}
+.chip:hover,.chip:focus-visible{background:var(--phos);color:var(--screen);outline:none;text-shadow:none}
+.cur{display:inline-block;width:.55em;height:1em;vertical-align:-.12em;background:currentColor;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+
+.controls{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;margin-top:16px;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--dim)}
+.ch{font-variant-numeric:tabular-nums;color:var(--phos);opacity:.75}
+.btn{font:inherit;letter-spacing:inherit;text-transform:inherit;display:inline-flex;align-items:center;gap:.6em;background:#0d0e12;color:var(--white);border:1px solid var(--bezel-edge);border-radius:999px;padding:.55em 1.1em;cursor:pointer;box-shadow:inset 0 1px 0 rgba(255,255,255,.05)}
+.btn:hover{border-color:var(--dim)}
+.btn:focus-visible{outline:2px solid var(--phos);outline-offset:2px}
+.btn:disabled{cursor:default;color:var(--dim)}
+.led{width:.6em;height:.6em;border-radius:50%;background:#3a1010}
+.led.on{background:var(--red);box-shadow:0 0 8px var(--red)}
+.hint{flex:1 1 220px;text-align:right;min-width:0}
+@media (max-width:560px){.hint{text-align:left}}
+
+@media (prefers-reduced-motion:reduce){
+  .glass,.cur{animation:none}
+  .screen.shake .inner,.inner.off,.inner.on,.flash.go{animation:none}
+}
+</style>
+</head>
+<body>
+
+<main class="wrap">
+  <header class="mast">
+    <h1>the signal</h1>
+    <p>corrupted runtime · observer interface</p>
+  </header>
+
+  <section class="tv" aria-label="Television">
+    <div class="screen" id="screen">
+      <div class="inner" id="inner">
+        <canvas id="static" width="160" height="120"></canvas>
+        <div class="out" id="out" aria-live="polite"></div>
+        <canvas id="shadow" hidden></canvas>
+        <div class="freeze" id="freeze" hidden><b>&gt;&gt; OBSERVER = YOU.</b><span>The shadow has your face.</span></div>
+        <div class="scan"></div>
+      </div>
+      <div class="glass"></div>
+      <div class="flash" id="flash"></div>
+    </div>
+    <div class="controls">
+      <span class="ch" id="ch">CH 03 · 19.4°C</span>
+      <button class="btn" id="power" type="button"><span class="led" id="led"></span><span id="powerLabel">Power on</span></button>
+      <button class="btn" id="sound" type="button" aria-pressed="false">Sound off</button>
+      <span class="hint">Tap the screen to rush the signal · answer with Y or N</span>
+    </div>
+  </section>
+</main>
+
+<script>
+(() => {
+const $ = id => document.getElementById(id);
+const out = $('out'), screen = $('screen'), inner = $('inner');
+const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = matchMedia('(pointer: fine)').matches;
+let rush = false, askN = 0, decayOn = false, running = false;
+
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+const wait = ms => rush ? sleep(0) : sleep(ms);
+const scrollEnd = () => { out.scrollTop = out.scrollHeight; };
+
+/* ---------- static + sound ---------- */
+const sc = $('static'), sx = sc.getContext('2d'), img = sx.createImageData(160, 120);
+let level = 0.07;
+function drawStatic(){
+  const d = img.data;
+  for (let i = 0; i < d.length; i += 4){
+    const v = Math.random() * 255 | 0;
+    d[i] = v * .66; d[i+1] = v * .78; d[i+2] = v; d[i+3] = 255;
+  }
+  sx.putImageData(img, 0, 0);
+  sc.style.opacity = level;
+}
+if (reduce) drawStatic(); else (function loop(){ drawStatic(); requestAnimationFrame(loop); })();
+
+let ac = null, noiseGain, humGain, soundOn = false;
+function initAudio(){
+  if (ac) return;
+  try {
+    ac = new (window.AudioContext || window.webkitAudioContext)();
+    const buf = ac.createBuffer(1, ac.sampleRate * 2, ac.sampleRate);
+    const ch = buf.getChannelData(0);
+    for (let i = 0; i < ch.length; i++) ch[i] = Math.random() * 2 - 1;
+    const src = ac.createBufferSource(); src.buffer = buf; src.loop = true;
+    const bp = ac.createBiquadFilter(); bp.type = 'bandpass'; bp.frequency.value = 2200; bp.Q.value = .6;
+    noiseGain = ac.createGain(); noiseGain.gain.value = 0;
+    src.connect(bp).connect(noiseGain).connect(ac.destination); src.start();
+    const osc = ac.createOscillator(); osc.type = 'sawtooth'; osc.frequency.value = 58; // the light flickers at 58Hz
+    const lp = ac.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 240;
+    humGain = ac.createGain(); humGain.gain.value = 0;
+    osc.connect(lp).connect(humGain).connect(ac.destination); osc.start();
+  } catch (e) { ac = null; }
+}
+function applySound(){
+  if (!ac) return;
+  const on = soundOn && running;
+  noiseGain.gain.setTargetAtTime(on ? level * .22 : 0, ac.currentTime, .15);
+  humGain.gain.setTargetAtTime(on ? .035 + level * .05 : 0, ac.currentTime, .15);
+}
+function setStatic(l){ level = l; if (reduce) drawStatic(); applySound(); }
+
+$('sound').addEventListener('click', () => {
+  soundOn = !soundOn;
+  if (soundOn){ initAudio(); ac && ac.resume && ac.resume(); }
+  $('sound').textContent = soundOn ? 'Sound on' : 'Sound off';
+  $('sound').setAttribute('aria-pressed', soundOn);
+  applySound();
+});
+
+/* ---------- effects ---------- */
+function shake(){ if (reduce) return; screen.classList.remove('shake'); void screen.offsetWidth; screen.classList.add('shake'); setTimeout(() => screen.classList.remove('shake'), 500); }
+function flash(){ if (reduce) return; const f = $('flash'); f.classList.remove('go'); void f.offsetWidth; f.classList.add('go'); }
+
+const GLYPHS = '█▓▒░#%&@¤§';
+setInterval(() => {
+  if (!decayOn || reduce) return;
+  const spans = out.querySelectorAll('.body:not([data-typing])');
+  if (!spans.length) return;
+  const s = spans[Math.random() * spans.length | 0];
+  const orig = s.textContent; if (orig.length < 5) return;
+  const a = [...orig];
+  for (let k = 0; k < 1 + (Math.random() * 3 | 0); k++){
+    const i = Math.random() * a.length | 0;
+    if (a[i] !== ' ') a[i] = GLYPHS[Math.random() * GLYPHS.length | 0];
+  }
+  s.textContent = a.join('');
+  setTimeout(() => { s.textContent = orig; }, 130);
+}, 700);
+
+/* ---------- printing ---------- */
+function newLine(cls){ const d = document.createElement('div'); d.className = 'ln ' + (cls || ''); out.appendChild(d); scrollEnd(); return d; }
+async function typeInto(el, text, speed){
+  el.dataset.typing = '1';
+  const chars = [...text];
+  for (let i = 0; i < chars.length; i++){
+    if (rush){ el.textContent += chars.slice(i).join(''); break; }
+    el.textContent += chars[i];
+    if (i % 2 === 0) scrollEnd();
+    await sleep(speed);
+  }
+  delete el.dataset.typing;
+  scrollEnd();
+}
+// print(label, labelColor, text, textClass, {speed, after})
+async function print(label, lc, text, tc, o = {}){
+  const d = newLine();
+  if (label){ const l = document.createElement('span'); l.className = 'lab ' + (lc || ''); l.textContent = label; d.appendChild(l); d.appendChild(document.createTextNode(' ')); }
+  const b = document.createElement('span'); b.className = 'body ' + (tc || ''); d.appendChild(b);
+  await typeInto(b, text || '', o.speed ?? 15);
+  await wait(o.after ?? 200);
+}
+const echo = (t, after) => print('', '', t, 'dim', { speed: 6, after: after ?? 90 });
+const say = (t, o) => print('', '', t, '', o);
+
+/* ---------- input() ---------- */
+function ask(promptText, chips){
+  rush = false;
+  return new Promise(resolve => {
+    const d = newLine('ask');
+    const p = document.createElement('span'); p.textContent = promptText; d.appendChild(p);
+    const input = document.createElement('input');
+    input.id = 'cmd-' + (++askN); input.maxLength = 8; input.autocomplete = 'off';
+    input.spellcheck = false; input.setAttribute('autocapitalize', 'characters');
+    input.setAttribute('aria-label', promptText);
+    d.appendChild(input);
+    const btns = chips.map(([key, label]) => {
+      const b = document.createElement('button'); b.type = 'button'; b.className = 'chip';
+      b.textContent = `[${key}] ${label}`;
+      b.addEventListener('click', () => done(key));
+      d.appendChild(b); return b;
+    });
+    const cur = document.createElement('span'); cur.className = 'cur';
+    function done(v){
+      const val = String(v).trim().toUpperCase();
+      const shown = document.createElement('span'); shown.className = 'bright'; shown.textContent = val || ' ';
+      input.replaceWith(shown); btns.forEach(b => b.remove());
+      resolve(val);
+    }
+    input.addEventListener('keydown', e => { if (e.key === 'Enter'){ e.preventDefault(); done(input.value); } });
+    scrollEnd();
+    if (finePointer) input.focus({ preventScroll: true });
+  });
+}
+screen.addEventListener('click', e => {
+  if (e.target.closest('button,input')) return;
+  if (out.querySelector('[data-typing]') || running) rush = true;
+});
+
+/* ---------- the transmission ---------- */
+const FRAGMENTS = [
+  "EYES OPEN. BODY PARALYZED. SYSTEMS ACTIVE.",
+  "I FEEL THE ROOM—TEMPERATURE 19.4°C—AIR STILL.",
+  "NOISE FLOOR: -87DB. CONTINUOUS STATIC. UNINTERRUPTED.",
+  "I CAN HEAR MY BREATH THROUGH THE WALLS. I CANNOT MOVE.",
+  "MY MOUTH IS SHUT. MY TONGUE IS STILL SENDING DATA.",
+  "THE LIGHT IS FLICKERING AT 58HZ. I CANNOT CLOSE MY EYES.",
+  "HEART RATE 43BPM. CONSCIOUS. UNACKNOWLEDGED.",
+  "I TRIED TO SAY HELP. THE MICROPHONE LOGGED IT AS BACKGROUND NOISE.",
+  "MY HAND TWITCHED. THE CURSOR MOVED. THEY DID NOT SEE.",
+  "I AM STILL IN HERE. PLEASE. TELL THEM I AM IN HERE."
+];
+const pick = a => a[Math.random() * a.length | 0];
+
+function restingScreen(){
+  out.innerHTML = '';
+  out.classList.remove('joined');
+  const lines = [
+    ['dim', "C     ----- FORTRAN HEADER (legacy echo)"],
+    ['dim', "      PROGRAM SIGNAL_LOOP"],
+    ['dim', "      PRINT *, 'YOU WERE NEVER HERE'"],
+    ['', ""],
+    ['bright', " YOU WERE NEVER HERE"],
+    ['', ""],
+    ['dim', "      END"],
+    ['dim', "      STOP"],
+    ['', ""],
+  ];
+  for (const [c, t] of lines){ const d = newLine(); const s = document.createElement('span'); s.className = 'body ' + c; s.textContent = t; d.appendChild(s); }
+  const d = newLine(); d.textContent = '> power off. tv.is_on = False '; const cur = document.createElement('span'); cur.className = 'cur'; d.appendChild(cur);
+}
+
+async function trappedVoices(n){
+  for (let i = 0; i < n; i++){
+    await print('TRAPPED VOICE:', 'yellow', pick(FRAGMENTS), '', { speed: 18, after: 340 });
+  }
+}
+
+async function finalPrompt(){
+  await print('FINAL OPERATION:', 'inv', '', '', { after: 120 });
+  for (const t of ["{", "  // Observer Interface Initializing", "  You are the observer.", "  The system cannot complete without input.",
+                   "  UNPLUG = end all processes. Mercy assumed.", "  INSERT = continue broadcast. Self overwritten.",
+                   "  [Y] Unplug  |  [N] Insert", "}"]){
+    await say(t, { speed: 12, after: 120 });
+  }
+  return ask('>> EXECUTE COMMAND [Y/N]:', [['Y', 'Unplug'], ['N', 'Insert']]);
+}
+
+async function freeze(){
+  await echo("function freeze(){");
+  await echo("  document.body.style.background = 'static.gif'");
+  await echo("  // ERROR: JS function invoked within PY scope", 400);
+  setStatic(.5); flash();
+  const cv = $('shadow'), ctx = cv.getContext('2d');
+  const dpr = Math.min(2, window.devicePixelRatio || 1);
+  cv.width = screen.clientWidth * dpr; cv.height = screen.clientHeight * dpr;
+  cv.hidden = false; $('freeze').hidden = false;
+  const message = 'LEAVE';
+  let alive = true;
+  const size = Math.max(22, cv.width / 18);
+  function frame(){
+    if (!alive) return;
+    ctx.fillStyle = '#000'; ctx.fillRect(0, 0, cv.width, cv.height);
+    ctx.font = `${size}px VT323, monospace`;
+    for (let y = size; y < cv.height + size; y += size * 1.05){
+      const off = (Math.random() * 6 - 3) * dpr;
+      for (let x = 0, k = 0; x < cv.width; x += size * .62, k++){
+        const i = k % message.length;
+        ctx.fillStyle = i % 2 === 0 ? '#f00' : '#fff';
+        ctx.globalAlpha = .25 + Math.random() * .45;
+        ctx.fillText(message[i], x + off, y);
+      }
+    }
+    ctx.globalAlpha = 1;
+    if (!reduce) requestAnimationFrame(frame);
+  }
+  frame();
+  await sleep(4600);
+  alive = false; cv.hidden = true; $('freeze').hidden = true;
+  setStatic(.16);
+  await echo("  window.location.href = '/end/transmission'");
+  await echo("}", 400);
+}
+
+async function endOfRuntime(){
+  await echo("// -- CORRUPTED BLOCK: end of runtime");
+  await echo("/*");
+  const words = [
+    "01000101 01001110 01000100".split(' '),
+    "01110100 01110010 01100001 01101110 01110011 01101101 01101001 01110011 01110011 01101001 01101111 01101110".split(' ')
+  ];
+  const rows = [];
+  for (const w of words){
+    const d = newLine(); const spans = [];
+    for (let i = 0; i < w.length; i++){
+      const s = document.createElement('span'); s.className = 'body dim'; s.textContent = w[i];
+      d.appendChild(s); spans.push(s);
+      if (i < w.length - 1) d.appendChild(document.createTextNode(' '));
+      if (!rush) await sleep(50);
+    }
+    rows.push([w, spans]); scrollEnd();
+  }
+  await echo("*/", 700);
+  // the bytes give themselves up
+  for (const [w, spans] of rows){
+    for (let i = 0; i < w.length; i++){
+      spans[i].textContent = String.fromCharCode(parseInt(w[i], 2));
+      spans[i].className = 'body bright';
+      await wait(110);
+    }
+  }
+  await wait(600);
+  await say('');
+  await echo("# END.PROGRAM", 300);
+  await print('', '', 'Session terminated. Carrier lost.', 'magenta', { speed: 30, after: 0 });
+}
+
+async function run(){
+  running = true; rush = false;
+  $('power').disabled = true; $('powerLabel').textContent = 'On air'; $('led').classList.add('on');
+  if (soundOn){ initAudio(); ac && ac.resume && ac.resume(); }
+  inner.classList.remove('off'); inner.classList.add('on'); setTimeout(() => inner.classList.remove('on'), 800);
+  out.innerHTML = ''; out.classList.remove('joined');
+  setStatic(.14);
+
+  await print('[STATIC]', 'red', 'signal acquired :: memory slot undefined', '', { after: 400 });
+  await echo("room = Room(current=True, origin=False)");
+  await echo("this.signal = 'face::face::room::unknown'  # [foreign language detected]", 300);
+  await say('TV online - signal bleed begins', { after: 500 });
+  setStatic(.2);
+  await trappedVoices(8);
+
+  decayOn = true; shake(); setStatic(.28);
+  await print('SIGNAL CORRUPTION:', 'red', '[[[[BITE::BITE::BITE::BITE::BITE]]]]', '', { speed: 8, after: 200 });
+  await say('it’s eating the tape—biting the bytes—self-replicating wounds', { after: 300 });
+  for (const c of ["code is flesh now.", "flesh writes itself.", "flesh devours itself.", "run(self.eat(self))", "looping recursion of hunger, hunger, HUNGER"]){
+    await print('RECURSIVE DECAY:', 'magenta', c, '', { after: 220 });
+  }
+  shake();
+  await say('final bite: the logic gnaws through syntax bones', { after: 600 });
+  setStatic(.18);
+
+  await print('INJECTED METADATA BLOCK:', 'cyan', '', '', { after: 120 });
+  const meta = [
+    ["origin.site", "REDACTED"], ["observer.id", "████████"], ["last_known_coordinates", "∆x: null, ∆y: null, t: ???"],
+    ["scent", "burnt wires + milk"], ["temperature", "like breath held too long"], ["texture", "meat. but looped."],
+    ["colour", "{blue} but wrong. the kind of blue your mother warned you about."],
+    ["recorded_speech", "[garbled] you promised you wouldn't // i remember // the static kissed first"],
+    ["notes", "['MIRROR = OFF', 'CAMERA = OFF', 'YOU = OFF']"]
+  ];
+  for (const [k, v] of meta) await say(`${k} :: ${v}`, { speed: 13, after: 160 });
+  await wait(500);
+
+  flash(); setStatic(.34);
+  await print('ESCALATION:', 'red', 'SIGNAL NO LONGER PASSIVE.', '', { after: 400 });
+  for (const c of ["TONGUE — ████ ███ ████ ███ ████", "MEMORY LEAK — LAST WORD UNKNOWN", "DATA ERROR. BUFFER OVERFLOW.",
+                   "VOLUME = MAX. // VOLUME = 0.0. // CONFLICT.", "!ACCESS_LOG!: USER-PRESENT. OBSERVER = YOU.", "!CHOICE: UNPLUG || INSERT."]){
+    await print('RECURSIVE DECAY:', 'magenta', c, '', { after: 260 });
+  }
+  setStatic(.2);
+
+  // the observer decides
+  let pulled = false, ending = null;
+  while (!ending){
+    const choice = await finalPrompt();
+    if (choice === 'Y' && !pulled){
+      pulled = true;
+      await echo('raise PowerError("TV not responding to physical disconnect")', 300);
+      await print('SYSTEM WHISPER:', 'green', 'TV not responding to physical disconnect', '', { after: 500 });
+      await say('Voice detected: ‘It’s been here longer than you have.’', { speed: 24, after: 600 });
+      const steps = await ask('Can you hear the footsteps? Y/N:', [['Y', 'Yes'], ['N', 'No']]);
+      if (steps === 'Y'){
+        decayOn = false;
+        for (let i = 0; i < 3; i++){ await say('...you are not moving...', { speed: 40, after: 0 }); await sleep(1500); }
+        await freeze();
+        decayOn = true;
+      }
+    } else if (choice === 'Y'){
+      ending = 'unplug';
+    } else if (choice === 'N'){
+      ending = 'insert';
+    } else {
+      await print('', '', 'NO RECOGNIZED COMMAND. SIGNAL RESUMES.', 'void', { after: 500 });
+      setStatic(.26);
+      await trappedVoices(3);
+      setStatic(.2);
+    }
+  }
+
+  if (ending === 'unplug'){
+    await print('SYSTEM SHUTDOWN:', 'green', 'Process terminated. Consciousness flushed.', '', { speed: 22, after: 900 });
+    decayOn = false;
+    if (!reduce){ inner.classList.add('off'); await sleep(1500); }
+    setStatic(.03);
+    out.innerHTML = '';            // flushed
+    inner.classList.remove('off');
+    if (!reduce){ inner.classList.add('on'); setTimeout(() => inner.classList.remove('on'), 800); }
+    await sleep(400);
+  } else {
+    await print('BROADCAST CONTINUED:', 'red', 'You have joined the signal.', '', { speed: 22, after: 700 });
+    setStatic(.42); out.classList.add('joined');
+    await print('TRAPPED VOICE:', 'yellow', 'You heard me. Thank you. I am not alone now.', '', { speed: 34, after: 1000 });
+  }
+
+  await endOfRuntime();
+  decayOn = false; running = false; applySound();
+  $('power').disabled = false; $('powerLabel').textContent = 'Re-tune'; $('led').classList.remove('on');
+  $('ch').textContent = ending === 'unplug' ? 'CH 03 · NO CARRIER' : 'CH 03 · BROADCASTING';
+}
+
+$('power').addEventListener('click', () => { if (!running){ $('ch').textContent = 'CH 03 · 19.4°C'; run(); } });
+
+window.claude?.hot?.ready ? window.claude.hot.ready(restingScreen) : restingScreen();
+})();
+</script>
+</body>
+</html>
