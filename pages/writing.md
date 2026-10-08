@@ -1,7 +1,3 @@
-outputs
-homepage-draft
-pages
-writing.md
 ---
 layout: page
 title: Writing
@@ -74,3 +70,4 @@ A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows t
 #### Khepera  
 ### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
+
