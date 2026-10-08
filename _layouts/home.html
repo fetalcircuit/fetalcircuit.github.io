@@ -2,22 +2,40 @@
 layout: default
 title: Home
 ---
-<p>Tiffany Funk is a writer, scholar, and artist. She works on sound, archives, and the feedback systems that shape attention — across scholarship, fiction, code, and performance, and in the ways these forms can speak to each other.</p>
 
-{% for post in paginator.posts %}
-  {% include featured-post.html %}
-{% endfor %}
+<p>Tiffany Funk is a writer, scholar, and artist working across poetry, fiction, sound, and computation.</p>
 
-<!-- Pagination links -->
-<div class="pagination">
-  {% if paginator.next_page %}
-    <a class="pagination-button pagination-active next" href="{{ site.github.url }}{{ paginator.next_page_path }}">{{ site.data.settings.pagination.previous_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.previous_page }}</span>
-  {% endif %}
-  {% if paginator.previous_page %}
-    <a class="pagination-button pagination-active" href="{{ site.baseurl }}{{ paginator.previous_page_path }}">{{ site.data.settings.pagination.next_page }}</a>
-  {% else %}
-    <span class="pagination-button">{{ site.data.settings.pagination.next_page }}</span>
-  {% endif %}
-</div>
+<section aria-labelledby="home-writing">
+  <h2 id="home-writing">Poetry &amp; hybrid work</h2>
+  <p>Interactive poems in which reading becomes an action: reblogging a prayer, answering a transmission, or optimizing a poem until its language changes.</p>
+  <p><em>Our Tumblr</em> · <em>The Signal</em> · <em>remediation — a duet</em></p>
+  <p><a href="{{ '/writing' | relative_url }}">Explore poetry &amp; fiction &rarr;</a></p>
+</section>
+
+<section aria-labelledby="home-hpschd">
+  <h2 id="home-hpschd">HPSCHD</h2>
+  <p><em>Inside John Cage and Lejaren A. Hiller Jr.’s Radical Multimedia Collaboration</em></p>
+  <a href="https://www.press.uillinois.edu/books/?id=c059957">
+    <div class="featured-post" style="background-image: url('{{ '/assets/img/candh.png' | relative_url }}');">
+      <h2><span>HPSCHD · March 2, 2027</span></h2>
+    </div>
+  </a>
+  <p>A study of Cage and Hiller’s 1969 multimedia collaboration, exploring sound, chance, computation, and the shared work of making art.</p>
+  <p>University of Illinois Press · Forthcoming March 2, 2027</p>
+  <p><a href="https://www.press.uillinois.edu/books/?id=c059957">View the book &rarr;</a></p>
+</section>
+
+<section aria-labelledby="home-haunted">
+  <h2 id="home-haunted">Haunted Circuits</h2>
+  <p>An academic manuscript in progress, tracing feedback, attention, and care across sound art and technological systems.</p>
+  <p><a href="{{ '/writing' | relative_url }}">Read about the manuscript &rarr;</a></p>
+</section>
+
+<section aria-labelledby="home-publications">
+  <h2 id="home-publications">Recent &amp; forthcoming writing</h2>
+  <ul>
+    <li><a href="https://malefica.press/this-is-disease-tiffany-funk-2/">Writing in Malefica Press</a></li>
+    <li><a href="https://www.gossamerwight.com/store/p/unstable-realities-pdf">Unstable Realities · Gossamer Wight</a></li>
+  </ul>
+  <p>Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow &amp; Cross Keys.</p>
+</section>
