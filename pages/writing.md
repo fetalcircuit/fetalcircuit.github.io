@@ -3,25 +3,53 @@ layout: page
 title: Writing
 category: writing
 permalink: /writing
-image: blackbox_header.png
 ---
 
-<html>
-    <a href="/assets/img/blackbox.pdf">
-<figure>
-    <img src="/assets/img/blackbox_header.png"
-         alt="Blackbox flowchart" width="100%">
-    <figcaption>Blackbox (n.), in Hole Black Hole Catalog, 2019.</figcaption>
-</figure></a></html>
-<br>
+Poetry, fiction, and hybrid works for the page and the browser.
 
-### Books  
+## Interactive poetry & hybrid work
 
-#### HPSCHD: Inside John Cage and Lejaren A. Hiller Jr.'s Radical Multimedia Collaboration  
-Forthcoming, University of Illinois Press. The first sustained study of Cage and Hiller's 1969 multimedia work, drawing on archival research to read HPSCHD as a foundational moment in the history of human-machine collaboration: programming as performance, code as score, listening as a practice of inhabiting systems too large to hold whole.
+### Our Tumblr
 
-#### Haunted Circuits and Sounding Care  
-*In progress*. A study of feedback as care infrastructure across sound art, clinical practice, and digital platforms, from medieval chant to contemporary streaming. The book argues that the same formal grammar of cue, threshold, and return can hold attention in care or harvest it for capital, and listens for the difference.
+A prayer unfolds through a social-media dashboard. Reblogging carries the poem forward through advertising, interruptions, and the demands of the platform.
+
+<!-- Add the reading link after publishing the HTML piece at /writing/our-tumblr/. -->
+
+### The Signal
+
+A haunted transmission unfolds through code, trapped voices, and choices addressed to the reader. Sound is optional.
+
+<!-- Add the reading link after publishing the HTML piece at /writing/the-signal/. -->
+
+### remediation — a duet
+
+A poem and the machine that “improves” it. Moving a slider expands superlatives and strikes through the poem’s bodily language; the reader controls the transformation.
+
+<!-- Add the reading link after publishing the HTML piece at /writing/remediation/. -->
+
+## Published poetry & fiction
+
+### This is Disease
+
+Newly published poem in *Malefica Press*.
+
+[Read “This is Disease” &rarr;](https://malefica.press/this-is-disease-tiffany-funk-2/)
+
+### cat.exe
+
+Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
+
+[Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
+
+## Forthcoming
+
+Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow & Cross Keys.
+
+<!-- Add contribution titles and publication dates when confirmed. -->
+
+## Longer fiction
+
+<!-- Descriptions and manuscript statuses below are retained from the existing site; confirm that they remain current. -->
 
 #### Art History for Deviants  
 Short story collection. Submitted for publication, 2026.
@@ -35,6 +63,18 @@ A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows t
 
 #### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
+
+
+## Scholarship
+
+<!-- Keep this material here until the Scholarship page is published, then replace this section with a link to /scholarship. -->
+
+#### HPSCHD: Inside John Cage and Lejaren A. Hiller Jr.'s Radical Multimedia Collaboration  
+Forthcoming March 2, 2027, University of Illinois Press. [Publisher information](https://www.press.uillinois.edu/books/?id=c059957). The first sustained study of Cage and Hiller's 1969 multimedia work, drawing on archival research to read HPSCHD as a foundational moment in the history of human-machine collaboration: programming as performance, code as score, listening as a practice of inhabiting systems too large to hold whole.
+
+#### Haunted Circuits and Sounding Care  
+*In progress*. A study of feedback as care infrastructure across sound art, clinical practice, and digital platforms, from medieval chant to contemporary streaming. The book argues that the same formal grammar of cue, threshold, and return can hold attention in care or harvest it for capital, and listens for the difference.
+
 
 ### Essays / Articles  
 
@@ -54,4 +94,5 @@ A novel. A literary-horror novel tracing a parasitic ontological presence across
 > In 1956, Lejaren A. Hiller, Jr., and Leonard Isaacson debuted the Illiac Suite, the first score composed with a computer. Its reception anticipated Hiller’s embattled career as an experimental composer. Though the Suite is an influential work of modern electronic music, Hiller’s accomplishment in computational experimentation is above all an impressive feat of postwar conceptual performance art. A reexamination of theoretical and methodological processes resulting in the Illiac Suite reveals a conceptual and performative emphasis reflecting larger trends in the experimental visual arts of the 1950s and 1960s, illuminating his eventual collaborations with John Cage and establishing his legacy in digital art practices.
 
 The Chapter "Dirty your Media: Artists’ Experiments in Bio-Sovereignty" is available in [The Aesthetics of Necropolitics,](https://rowman.com/ISBN/9781786606853/The-Aesthetics-of-Necropolitics) a volume edited by Natasha Lushetich. It is part of the series Experiments/On the Political, published by Rowman and Littlefield International.
+
 
