@@ -1,3 +1,7 @@
+outputs
+homepage-draft
+pages
+writing.md
 ---
 layout: page
 title: Writing
@@ -55,46 +59,18 @@ Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and
 <!-- Descriptions and manuscript statuses below are retained from the existing site; confirm that they remain current. -->
 
 #### Art History for Deviants  
+### Art History for Deviants  
 Short story collection. Submitted for publication, 2026.
 Eighteen stories at the intersection of institutional critique, body horror, and speculative form — set in museums that digest their visitors, relay stations that pair their personnel, academic conferences that become the phenomenon they describe, and purgatorial loops where recognition and violence are indistinguishable. Art History for Deviants treats the archive, the exhibit, and the bureaucratic record as sites of consumption rather than preservation.
 
 #### Montauk  
+### Montauk  
 A novel. A sound archivist restoring damaged wax cylinders discovers that her recordings are connected to a sonic practice from the 1970s — and that her late mother was once part of it. Currently complete; representation queries welcome.
 
 #### Mnemosyne   
+### Mnemosyne   
 A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows three figures — a captain logging her last days alone aboard a dead station, a debris-sweeper engineer who refuses to burn what she's been ordered to clean, and the corporate manager who builds a department around the refusal. In revision.
 
 #### Khepera  
+### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
-
-
-## Scholarship
-
-<!-- Keep this material here until the Scholarship page is published, then replace this section with a link to /scholarship. -->
-
-#### HPSCHD: Inside John Cage and Lejaren A. Hiller Jr.'s Radical Multimedia Collaboration  
-Forthcoming March 2, 2027, University of Illinois Press. [Publisher information](https://www.press.uillinois.edu/books/?id=c059957). The first sustained study of Cage and Hiller's 1969 multimedia work, drawing on archival research to read HPSCHD as a foundational moment in the history of human-machine collaboration: programming as performance, code as score, listening as a practice of inhabiting systems too large to hold whole.
-
-#### Haunted Circuits and Sounding Care  
-*In progress*. A study of feedback as care infrastructure across sound art, clinical practice, and digital platforms, from medieval chant to contemporary streaming. The book argues that the same formal grammar of cue, threshold, and return can hold attention in care or harvest it for capital, and listens for the difference.
-
-
-### Essays / Articles  
-
-["Resident Aliens: A Brief History of Videogames and Fine Art," *ArtReview*, March 2024.](https://artreview.com/resident-aliens-a-brief-history-of-videogames-and-fine-art/)
-
-"John Cage and Lejaren A. Hiller Jr., HPSCHD," is included in the [*Coded: Art Enters the Computer Age, 1952-1982*](https://www.thelacmastore.org/collections/coded-art-enters-the-computer-age-1952-1982/products/coded) exhibition catalog, accompanying the "Coded" exhibition at LACMA from February to July, 2023.  
-
-["Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,"](https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/RESOUND19.7) 43-50, Conference proceedings, RE:SOUND, the 8th International Conference for Histories of Media Arts 2019, Aalborg, Denmark, August 2019, doi: 10.14236/ewic/RESOUND19.7.  
-
-[Blackbox (n.), in Hole Black Hole Catalog, Flatland, 2019.](https://flatland.online/index.php/archive/hbh/)  
-> These diagrammatic passages use software flowchart methods and aesthetics to explore the effects that the term "black box" as metaphor/software/theory has on knowledge generation. What would a "cult of the black box" look like, or are we already unwitting members? Included in the *Hole Black Hole Catalog*, produced by Flatland, Chicago.  
-
-[“From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,”](https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s) Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, *Frieze*, December 18, 2019.
-
-["A Musical Suite Composed by an Electronic Brain: Reexamining the Illiac Suite and the Legacy of Lejaren A. Hiller Jr,"](https://goo.gl/atrFx5) Leonardo Music Journal, Volume 28 (December 2018).
-
-> In 1956, Lejaren A. Hiller, Jr., and Leonard Isaacson debuted the Illiac Suite, the first score composed with a computer. Its reception anticipated Hiller’s embattled career as an experimental composer. Though the Suite is an influential work of modern electronic music, Hiller’s accomplishment in computational experimentation is above all an impressive feat of postwar conceptual performance art. A reexamination of theoretical and methodological processes resulting in the Illiac Suite reveals a conceptual and performative emphasis reflecting larger trends in the experimental visual arts of the 1950s and 1960s, illuminating his eventual collaborations with John Cage and establishing his legacy in digital art practices.
-
-The Chapter "Dirty your Media: Artists’ Experiments in Bio-Sovereignty" is available in [The Aesthetics of Necropolitics,](https://rowman.com/ISBN/9781786606853/The-Aesthetics-of-Necropolitics) a volume edited by Natasha Lushetich. It is part of the series Experiments/On the Political, published by Rowman and Littlefield International.
-
