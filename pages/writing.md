@@ -71,3 +71,6 @@ A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows t
 ### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
 
+## Scholarship
+
+For *HPSCHD*, *Haunted Circuits and Sounding Care*, and academic essays, visit [Scholarship]({{ '/scholarship' | relative_url }}).
