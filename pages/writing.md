@@ -37,7 +37,7 @@ Newly published poem in *Malefica Press*.
 
 ### cat.exe
 
-Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
+Newly published in *Unstable Realities*, an anthology from *GossamerWight*.
 
 [Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
 
