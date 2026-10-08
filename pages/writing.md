@@ -54,20 +54,16 @@ Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and
 
 <!-- Descriptions and manuscript statuses below are retained from the existing site; confirm that they remain current. -->
 
-#### Art History for Deviants  
 ### Art History for Deviants  
 Short story collection. Submitted for publication, 2026.
 Eighteen stories at the intersection of institutional critique, body horror, and speculative form — set in museums that digest their visitors, relay stations that pair their personnel, academic conferences that become the phenomenon they describe, and purgatorial loops where recognition and violence are indistinguishable. Art History for Deviants treats the archive, the exhibit, and the bureaucratic record as sites of consumption rather than preservation.
 
-#### Montauk  
 ### Montauk  
 A novel. A sound archivist restoring damaged wax cylinders discovers that her recordings are connected to a sonic practice from the 1970s — and that her late mother was once part of it. Currently complete; representation queries welcome.
 
-#### Mnemosyne   
 ### Mnemosyne   
 A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows three figures — a captain logging her last days alone aboard a dead station, a debris-sweeper engineer who refuses to burn what she's been ordered to clean, and the corporate manager who builds a department around the refusal. In revision.
 
-#### Khepera  
 ### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
 
