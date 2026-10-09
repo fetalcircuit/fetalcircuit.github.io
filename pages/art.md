@@ -32,7 +32,7 @@ permalink: /art/
 
 </div>
 
-<h2 class="art-section-heading" id="archive">Selected works · 2023–2009</h2>
+<h2 class="art-section-heading" id="archive">Selected works · 2O23–2OO9</h2>
 
 <div class="art-grid">
 
