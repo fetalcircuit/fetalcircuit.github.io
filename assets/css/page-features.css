@@ -1,0 +1,33 @@
+/* Shared visual treatment for Writing, Scholarship, and Art. */
+.page-content { max-width: 880px; padding: 0; margin: 10px auto; }
+.work-page { margin-top: 24px; }
+.work-page p, .work-page li { font-size: 15px; line-height: 1.7; }
+.work-page h2 { color: YellowGreen; text-shadow: 0 0 2px black, 0 0 2px black, 0 0 2px black, 0 0 2px black; font-size: 32px; margin-top: 36px; }
+.work-page h3 { font-size: 20px; margin-top: 26px; }
+.work-page img { display: block; width: 100%; max-width: 100%; height: auto; margin: 20px 0; }
+.work-page .work-feature { display: block; margin: 0 0 28px; background: #06070b; }
+.work-page .work-feature img { width: 100%; height: auto; margin: 0; }
+.work-page .work-feature figcaption { padding: 12px 16px; font-size: 14px; line-height: 1.5; color: #f2f4ff; border-bottom: 2px solid YellowGreen; }
+.work-page .work-feature a { color: inherit; text-underline-offset: 3px; }
+.work-page > h2 { border-top: 1px solid #ddd; padding-top: 24px; }
+.work-page a:focus-visible { outline: 2px solid YellowGreen; outline-offset: 4px; }
+.work-page iframe { max-width: 100%; }
+@media (max-width: 600px) {
+  .work-page { margin-top: 20px; }
+  .work-page h2 { font-size: 28px; }
+}
+
+
+/* Small project previews with readable text alongside. */
+.work-page .work-row { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 24px; align-items: start; margin: 28px 0; }
+.work-page .work-thumbnail { display: block; min-width: 0; }
+.work-page .work-thumbnail img { width: 100%; max-width: 100%; height: auto; margin: 0; }
+.work-page .work-row-copy { min-width: 0; }
+.work-page .work-row-copy > :first-child { margin-top: 0; }
+.work-page .work-row-copy h2 { border: 0; padding: 0; margin-top: 0; font-size: 28px; }
+.work-page .work-row-copy h3 { margin-top: 0; }
+.work-page .work-row-copy p { margin-top: 10px; }
+@media (max-width: 600px) {
+  .work-page .work-row { grid-template-columns: minmax(0, 1fr); gap: 14px; }
+  .work-page .work-thumbnail { width: min(280px, 100%); }
+}
