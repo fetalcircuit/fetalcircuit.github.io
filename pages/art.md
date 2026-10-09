@@ -73,20 +73,6 @@ Short retro-game sketches in game engine Bitsy.org.
 
 <div class="work-row-copy" markdown="1">
 
-## ORACLE I
-2023, video (ChatGPT, Runway AI, custom sound hardware)
-
-
-Oracle I was generated using AI video generation software using prompts from ICHING (Book of Changes) passages alongside stylistic markers of 1970s sci-fi cinema. The resultant videos are edited together to create a retro-futuristic trailer for a speculative film exploring a future of the past, where hollow beings flit in and out of setpieces referencing forever wars, forbidden love, and techno-colonialism.
-
-</div>
-
-</div>
-
-<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/881078741?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Oracle I"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
-
-
-
 ## INTERACTIVE FICTION/TEXT ADVENTURES
 2018, websites (HTML5, Processing, Twine, p5.js)
 
@@ -106,6 +92,18 @@ Websites/games/interactive fiction/non-fiction and text adventure experiments:
 <a class="work-thumbnail" href="https://fetalcircuit.github.io/kaleidoscope/" target="_blank" rel="noopener"><img src="{{ '/assets/img/02kaleido.png' | relative_url }}" alt="Generative Kaleidoscope imagery" loading="lazy"></a>
 
 <div class="work-row-copy" markdown="1">
+
+## ORACLE I
+2023, video (ChatGPT, Runway AI, custom sound hardware)
+
+
+Oracle I was generated using AI video generation software using prompts from ICHING (Book of Changes) passages alongside stylistic markers of 1970s sci-fi cinema. The resultant videos are edited together to create a retro-futuristic trailer for a speculative film exploring a future of the past, where hollow beings flit in and out of setpieces referencing forever wars, forbidden love, and techno-colonialism.
+
+</div>
+
+</div>
+
+<div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/881078741?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Oracle I"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 ## GENERATIVE KALEIDOCOPE
 2016, website, custom software
