@@ -29,6 +29,22 @@ A poem and the machine that “improves” it. Moving a slider expands superlati
 
 <a href="{{ '/writing/remediation.html' | relative_url }}" target="_blank" rel="noopener">Read “remediation — a duet” &#8599;</a>
 
+### Pow-Wows; or, Long Lost Friend (Annotated)
+
+2018 · Interactive annotated text.
+
+An earlier hybrid work that turns a book of remedies, prayers, and charms into a linked reading experience.
+
+<a href="{{ '/powwow/' | relative_url }}" target="_blank" rel="noopener">Explore “Pow-Wows; or, Long Lost Friend (Annotated)” &#8599;</a>
+
+### I Ching Online
+
+2016–present · Generative text and interactive reading.
+
+An interactive work that generates I Ching readings and symbolic images through computational chance operations.
+
+<a href="/iching/" target="_blank" rel="noopener">Explore “I Ching Online” &#8599;</a>
+
 ## Published poetry & fiction
 
 ### This is Disease
