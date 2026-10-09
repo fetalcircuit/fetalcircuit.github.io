@@ -3,47 +3,78 @@ layout: default
 title: Home
 ---
 
-<p>Tiffany Funk is a writer, scholar, and artist working across poetry, fiction, sound, and computation.</p>
+<style>
+.home-editorial { margin: 28px 0 40px; }
+.home-editorial .home-intro { max-width: 850px; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.4; font-weight: 500; margin: 0 0 24px; }
+.home-editorial .home-accent { width: 120px; height: 2px; background: YellowGreen; margin-bottom: 30px; }
+.home-editorial .home-poetry { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); background: #06070b; color: #f2f4ff; }
+.home-editorial .home-poetry-copy { padding: 36px 30px; align-self: center; }
+.home-editorial .home-poetry h2 { font-size: clamp(32px,3.4vw,44px); margin: 0 0 20px; color: YellowGreen; text-shadow: 0 0 2px black, 0 0 2px black; }
+.home-editorial .home-poetry p { font-size: 17px; line-height: 1.6; }
+.home-editorial .home-poetry a { color: #f2f4ff; text-underline-offset: 4px; }
+.home-editorial .home-enter { text-decoration-color: YellowGreen; }
+.home-editorial .home-poetry small { color: #b7bac4; font-size: 12px; }
+.home-editorial .home-preview { display: flex; align-items: center; min-width: 0; }
+.home-editorial img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; }
+.home-editorial .home-book { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 36px; align-items: center; margin-top: 40px; }
+.home-editorial .home-book h2 { font-size: clamp(40px,5vw,58px); margin: 0 0 14px; }
+.home-editorial .home-book p, .home-editorial .home-updates p { font-size: 15px; line-height: 1.65; }
+.home-editorial .home-date { border-left: 2px solid YellowGreen; padding-left: 12px; }
+.home-editorial .home-updates { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 36px; margin-top: 40px; padding-top: 28px; border-top: 1px solid #ddd; }
+.home-editorial .home-updates h2 { font-size: 30px; margin-top: 0; }
+.home-editorial .home-publications { border-left: 2px solid YellowGreen; padding-left: 28px; }
+.home-editorial a:focus-visible { outline: 2px solid YellowGreen; outline-offset: 5px; }
+@media (max-width:700px) {
+  .home-editorial .home-poetry, .home-editorial .home-book, .home-editorial .home-updates { grid-template-columns: minmax(0,1fr); }
+  .home-editorial .home-poetry-copy { padding: 28px 22px 12px; }
+  .home-editorial .home-book { gap: 20px; margin-top: 30px; }
+  .home-editorial .home-updates { gap: 28px; margin-top: 30px; }
+  .home-editorial .home-publications { border-left: 0; border-top: 2px solid YellowGreen; padding: 24px 0 0; }
+}
+</style>
 
-<section aria-labelledby="home-writing">
-  <h2 id="home-writing">Poetry &amp; hybrid work</h2>
-  <a href="{{ '/writing/the-signal.html' | relative_url }}" aria-label="Enter The Signal, an interactive poem">
-  <a href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener" aria-label="Enter The Signal, an interactive poem">
-    <div class="featured-post" style="background-color: #08090d; background-image: url('{{ '/assets/img/the-signal-preview-wide.jpg' | relative_url }}');">
-      <h2><span>The Signal</span></h2>
+<div class="home-editorial">
+  <p class="home-intro">Tiffany Funk is a writer, scholar, and artist working across poetry, fiction, sound, and computation.</p>
+  <div class="home-accent" aria-hidden="true"></div>
+
+  <section class="home-poetry" aria-labelledby="home-writing">
+    <div class="home-poetry-copy">
+      <h2 id="home-writing">Poetry &amp;<br>hybrid work</h2>
+      <p>Interactive poems for the browser, in which reading becomes an action.</p>
+      <p><a class="home-enter" href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener">Enter The Signal &#8599;</a></p>
+      <p><a href="{{ '/writing' | relative_url }}">Explore poetry &amp; fiction &rarr;</a></p>
+      <small>Interactive works open in a new tab.</small>
     </div>
-  </a>
-  <p>Interactive poems in which reading becomes an action: reblogging a prayer, answering a transmission, or optimizing a poem until its language changes.</p>
-  <p><a href="{{ '/writing/our-tumblr.html' | relative_url }}">Our Tumblr</a> · <a href="{{ '/writing/the-signal.html' | relative_url }}">The Signal</a> · <a href="{{ '/writing/remediation.html' | relative_url }}">remediation — a duet</a></p>
-  <p><a href="{{ '/writing/our-tumblr.html' | relative_url }}" target="_blank" rel="noopener">Our Tumblr</a> · <a href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener">The Signal</a> · <a href="{{ '/writing/remediation.html' | relative_url }}" target="_blank" rel="noopener">remediation — a duet</a></p>
-  <p><small>Interactive works open in a new tab.</small></p>
-  <p><a href="{{ '/writing' | relative_url }}">Explore poetry &amp; fiction &rarr;</a></p>
-</section>
+    <a class="home-preview" href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener" aria-label="Enter The Signal, an interactive poem (opens in a new tab)">
+      <img src="{{ '/assets/img/the-signal-preview-wide.jpg' | relative_url }}" alt="The Signal’s television interface, with the message Observer = You">
+    </a>
+  </section>
 
-<section aria-labelledby="home-hpschd">
-  <h2 id="home-hpschd">HPSCHD</h2>
-  <p><em>Inside John Cage and Lejaren A. Hiller Jr.’s Radical Multimedia Collaboration</em></p>
-  <a href="https://www.press.uillinois.edu/books/?id=c059957">
-    <div class="featured-post" style="background-image: url('{{ '/assets/img/candh.png' | relative_url }}');">
-      <h2><span>HPSCHD · March 2, 2027</span></h2>
+  <section class="home-book" aria-labelledby="home-hpschd">
+    <div>
+      <h2 id="home-hpschd">HPSCHD</h2>
+      <p><em>Inside John Cage and Lejaren A. Hiller Jr.’s Radical Multimedia Collaboration</em></p>
+      <p>A study of Cage and Hiller’s 1969 multimedia collaboration, exploring sound, chance, computation, and the shared work of making art.</p>
+      <p class="home-date">University of Illinois Press<br>Forthcoming March 2, 2027</p>
+      <p><a href="https://www.press.uillinois.edu/books/?id=c059957">View the book &rarr;</a></p>
     </div>
-  </a>
-  <p>A study of Cage and Hiller’s 1969 multimedia collaboration, exploring sound, chance, computation, and the shared work of making art.</p>
-  <p>University of Illinois Press · Forthcoming March 2, 2027</p>
-  <p><a href="https://www.press.uillinois.edu/books/?id=c059957">View the book &rarr;</a></p>
-</section>
+    <a href="https://www.press.uillinois.edu/books/?id=c059957" aria-label="HPSCHD at University of Illinois Press">
+      <img src="{{ '/assets/img/candh.png' | relative_url }}" alt="Image accompanying HPSCHD, Tiffany Funk’s book on John Cage and Lejaren Hiller">
+    </a>
+  </section>
 
-<section aria-labelledby="home-haunted">
-  <h2 id="home-haunted">Haunted Circuits</h2>
-  <p>An academic manuscript in progress, tracing feedback, attention, and care across sound art and technological systems.</p>
-  <p><a href="{{ '/scholarship' | relative_url }}">Explore scholarship &rarr;</a></p>
-</section>
+  <div class="home-updates">
+    <section aria-labelledby="home-haunted">
+      <h2 id="home-haunted">Haunted Circuits</h2>
+      <p>An academic manuscript in progress, tracing feedback, attention, and care across sound art and technological systems.</p>
+      <p><a href="{{ '/scholarship' | relative_url }}">Explore scholarship &rarr;</a></p>
+    </section>
+    <section class="home-publications" aria-labelledby="home-publications">
+      <h2 id="home-publications">Recent writing</h2>
+      <p><a href="https://malefica.press/this-is-disease-tiffany-funk-2/">“This is Disease” · Malefica Press</a></p>
+      <p><a href="https://www.gossamerwight.com/store/p/unstable-realities-pdf">“cat.exe” · Unstable Realities</a></p>
+      <p>Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow &amp; Cross Keys.</p>
+    </section>
+  </div>
+</div>
 
-<section aria-labelledby="home-publications">
-  <h2 id="home-publications">Recent &amp; forthcoming writing</h2>
-  <ul>
-    <li><a href="https://malefica.press/this-is-disease-tiffany-funk-2/">“This is Disease” · Malefica Press</a> — newly published poem</li>
-    <li><a href="https://www.gossamerwight.com/store/p/unstable-realities-pdf">“cat.exe” · Unstable Realities</a> — newly published in the GossamerWight anthology</li>
-  </ul>
-  <p>Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow &amp; Cross Keys.</p>
-</section>
