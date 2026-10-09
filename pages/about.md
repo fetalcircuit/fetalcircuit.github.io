@@ -7,7 +7,7 @@ permalink: /about
 <style>
 .about-profile { max-width: 880px; margin: 28px auto 0; }
 .about-intro { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 36px; align-items: start; }
-.about-intro .about-lead { font-size: clamp(22px, 2.5vw, 30px); line-height: 1.4; margin: 0 0 24px; font-weight: 500; }
+.about-intro .about-lead { font-size: 18px; line-height: 1.5; margin: 0 0 24px; font-weight: 400; }
 .about-intro .about-portrait { display: block; width: 100%; max-width: 220px; height: auto; margin: 0; }
 .about-links { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 16px; line-height: 1.6; }
 .about-biography { max-width: 72ch; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid #ddd; }
