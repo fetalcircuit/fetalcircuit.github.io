@@ -4,6 +4,15 @@ title: Scholarship
 permalink: /scholarship
 ---
 
+<link rel="stylesheet" href="{{ '/assets/css/page-features.css' | relative_url }}">
+
+<div class="work-page" markdown="1">
+
+<figure class="work-feature">
+  <a href="https://www.press.uillinois.edu/books/?id=c059957"><img src="{{ '/assets/img/candh.png' | relative_url }}" alt="John Cage and Lejaren Hiller alongside HPSCHD imagery"></a>
+  <figcaption><a href="https://www.press.uillinois.edu/books/?id=c059957">HPSCHD · Forthcoming March 2, 2027 &rarr;</a></figcaption>
+</figure>
+
 Research on sound, computation, archives, and the systems that shape attention.
 
 ## HPSCHD: Inside John Cage and Lejaren A. Hiller Jr.'s Radical Multimedia Collaboration  
@@ -15,14 +24,47 @@ Forthcoming March 2, 2027, University of Illinois Press. [Publisher information]
 
 ## Selected essays & articles  
 
+<div class="work-row" markdown="1">
+
+<a class="work-thumbnail" href="https://artreview.com/resident-aliens-a-brief-history-of-videogames-and-fine-art/"><img src="{{ '/assets/img/artreview.jpg' | relative_url }}" alt="Resident Aliens article imagery" loading="lazy"></a>
+
+<div class="work-row-copy" markdown="1">
+
 ["Resident Aliens: A Brief History of Videogames and Fine Art," *ArtReview*, March 2024.](https://artreview.com/resident-aliens-a-brief-history-of-videogames-and-fine-art/)
 
-"John Cage and Lejaren A. Hiller Jr., HPSCHD," is included in the [*Coded: Art Enters the Computer Age, 1952-1982*](https://www.thelacmastore.org/collections/coded-art-enters-the-computer-age-1952-1982/products/coded) exhibition catalog, accompanying the "Coded" exhibition at LACMA from February to July, 2023.  
+</div>
+
+</div>
+
+
+<div class="work-row" markdown="1">
+
+<div class="work-thumbnail"><img src="{{ '/assets/img/coded.png' | relative_url }}" alt="Coded exhibition catalogue imagery" loading="lazy"></div>
+
+<div class="work-row-copy" markdown="1">
+
+"John Cage and Lejaren A. Hiller Jr., HPSCHD," is included in the [*Coded: Art Enters the Computer Age, 1952-1982*](https://www.thelacmastore.org/collections/coded-art-enters-the-computer-age-1952-1982/products/coded) exhibition catalog, accompanying the "Coded" exhibition at LACMA from February to July, 2023.
+
+</div>
+
+</div>
+
 
 ["Deep Listening: Early Computational Composition and its Influence on Algorithmic Aesthetics,"](https://www.scienceopen.com/hosted-document?doi=10.14236/ewic/RESOUND19.7) 43-50, Conference proceedings, RE:SOUND, the 8th International Conference for Histories of Media Arts 2019, Aalborg, Denmark, August 2019, doi: 10.14236/ewic/RESOUND19.7.  
 
+<div class="work-row" markdown="1">
+
+<a class="work-thumbnail" href="https://flatland.online/index.php/archive/hbh/"><img src="{{ '/assets/img/blackbox_header.png' | relative_url }}" alt="Blackbox diagrammatic writing" loading="lazy"></a>
+
+<div class="work-row-copy" markdown="1">
+
 [Blackbox (n.), in Hole Black Hole Catalog, Flatland, 2019.](https://flatland.online/index.php/archive/hbh/)  
-> These diagrammatic passages use software flowchart methods and aesthetics to explore the effects that the term "black box" as metaphor/software/theory has on knowledge generation. What would a "cult of the black box" look like, or are we already unwitting members? Included in the *Hole Black Hole Catalog*, produced by Flatland, Chicago.  
+> These diagrammatic passages use software flowchart methods and aesthetics to explore the effects that the term "black box" as metaphor/software/theory has on knowledge generation. What would a "cult of the black box" look like, or are we already unwitting members? Included in the *Hole Black Hole Catalog*, produced by Flatland, Chicago.
+
+</div>
+
+</div>
+
 
 [“From Wetware to Tilt Brush, How Artists Tested the Limits of Technology in the 2010s,”](https://frieze.com/article/wetware-tilt-brush-how-artists-tested-limits-technology-2010s) Alex Estorick, with Cécile B. Evans, Jenna Sutela, Jonathan Yeo, Tiffany Funk, Luba Elliott, Anna Ridler, *Frieze*, December 18, 2019.
 
@@ -32,4 +74,5 @@ Forthcoming March 2, 2027, University of Illinois Press. [Publisher information]
 
 The Chapter "Dirty your Media: Artists’ Experiments in Bio-Sovereignty" is available in [The Aesthetics of Necropolitics,](https://rowman.com/ISBN/9781786606853/The-Aesthetics-of-Necropolitics) a volume edited by Natasha Lushetich. It is part of the series Experiments/On the Political, published by Rowman and Littlefield International.
 
+</div>
 
