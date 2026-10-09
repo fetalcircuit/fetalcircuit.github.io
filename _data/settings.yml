@@ -9,8 +9,7 @@ google-ID: ''
 menu:
 - {name: 'Writing',     url: 'writing'}
 - {name: 'Scholarship', url: 'scholarship'}
-- {name: 'Art & Games', url: 'art'}
-- {name: 'Sound',       url: 'sound'}
+- {name: 'Art',         url: 'art/'}
 - {name: 'About',       url: 'about'}
 
 # Available social icons are powered by Font Awesome, so you can use any icon that they offer
