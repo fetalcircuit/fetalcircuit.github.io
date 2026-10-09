@@ -10,7 +10,7 @@ permalink: /art/
 
 <figure class="work-feature">
   <a href="{{ '/iching/' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/Print-12(1).jpg' | relative_url }}" alt="I Ching Online installation at the Beall Center for Art + Technology"></a>
-  <figcaption><a href="{{ '/iching/' | relative_url }}" target="_blank" rel="noopener">I Ching Online · Installation at the Beall Center for Art + Technology &rarr;</a></figcaption>
+ <figcaption>Installation of <em>I Ching Online</em> (right) at the Beall Center for Art + Technology; photo by Yubo Dong, courtesy of Beall Center for Art + Technology, Claire Trevor School for the Arts at UC Irvine.</figcaption>
 </figure>
 
 Selected works in sound, games, performance, video, and computation. For interactive poetry and hybrid writing, visit [Writing]({{ '/writing' | relative_url }}).
@@ -36,11 +36,6 @@ The aesthetic of these generative covers is based on 1970s science-fiction pulp 
 
 
 1. This process is documented in Lejaren Hiller’s article “Programming the I-Ching oracle.” *Computer Studies in the Humanities and Verbal Behavior* 3 (1970): 130-43.
-
-<figure>
-    <img src="/assets/img/Print-12(1).jpg" width="100%" alt="Beall Center installation">
-    <figcaption>Installation of <em>I Ching Online</em> (right) at the Beall Center for Art + Technology; photo by Yubo Dong, courtesy of Beall Center for Art + Technology, Claire Trevor School for the Arts at UC Irvine.</figcaption>
-</figure>
 
 ## Dance to Anything, Lake Eden
 Performance at {RE}:Happening 11, Black Mountain NC, April 8, 2023
