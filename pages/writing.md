@@ -9,26 +9,25 @@ Poetry, fiction, and hybrid works for the page and the browser.
 
 ## Interactive poetry & hybrid work
 
+Interactive works open in a new tab.
+
 ### Our Tumblr
 
 A prayer unfolds through a social-media dashboard. Reblogging carries the poem forward through advertising, interruptions, and the demands of the platform.
 
-<!-- Add the reading link after publishing the HTML piece at /writing/our-tumblr/. -->
-[Read “Our Tumblr” &rarr;]({{ '/writing/our-tumblr.html' | relative_url }})
+<a href="{{ '/writing/our-tumblr.html' | relative_url }}" target="_blank" rel="noopener">Read “Our Tumblr” &#8599;</a>
 
 ### The Signal
 
 A haunted transmission unfolds through code, trapped voices, and choices addressed to the reader. Sound is optional.
 
-<!-- Add the reading link after publishing the HTML piece at /writing/the-signal/. -->
-[Enter “The Signal” &rarr;]({{ '/writing/the-signal.html' | relative_url }})
+<a href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener">Enter “The Signal” &#8599;</a>
 
 ### remediation — a duet
 
 A poem and the machine that “improves” it. Moving a slider expands superlatives and strikes through the poem’s bodily language; the reader controls the transformation.
 
-<!-- Add the reading link after publishing the HTML piece at /writing/remediation/. -->
-[Read “remediation — a duet” &rarr;]({{ '/writing/remediation.html' | relative_url }})
+<a href="{{ '/writing/remediation.html' | relative_url }}" target="_blank" rel="noopener">Read “remediation — a duet” &#8599;</a>
 
 ## Published poetry & fiction
 
@@ -67,6 +66,9 @@ A novel. Set in a far-future corporate reclamation industry, Mnemosyne follows t
 ### Khepera  
 A novel. A literary-horror novel tracing a parasitic ontological presence across centuries — from a medieval English village to a 1920s Oxford excavation team — and the gestures, words, and rituals the body uses to hold or expel what it cannot name. In revision.
 
+
+
 ## Scholarship
 
 For *HPSCHD*, *Haunted Circuits and Sounding Care*, and academic essays, visit [Scholarship]({{ '/scholarship' | relative_url }}).
+
