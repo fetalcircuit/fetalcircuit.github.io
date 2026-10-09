@@ -33,7 +33,4 @@ permalink: /about
     </table>
     </div>
 </html>
-    </table>
-    </div>
-</html>
 
