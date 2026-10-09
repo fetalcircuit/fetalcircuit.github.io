@@ -8,7 +8,7 @@ permalink: /about
 <div align="justify">
     <table >
      <tr>
-        <td><img src="{{ '/assets/profile.png' | relative_url }}" alt="profile photo of Tiffany Funk" width="100%"></td>
+        <td><img src="{{ '/assets/img/funk_profile.jpg' | relative_url }}" alt="profile photo of Tiffany Funk" width="100%"></td>
 
 <td><p align="left"><b>Tiffany Funk</b> is a writer, scholar, and artist working across poetry, fiction, sound, and computation. Her work explores archives and the feedback systems that shape attention.</p>
 
