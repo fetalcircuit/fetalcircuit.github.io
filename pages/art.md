@@ -3,10 +3,13 @@ layout: page
 title: Art
 permalink: /art/
 ---
+
+Selected works in sound, games, performance, video, and computation. For interactive poetry and hybrid writing, visit [Writing]({{ '/writing' | relative_url }}).
+
 ## I CHING ONLINE
 2016-present, website (HTML5, Processing, p5.js)
 
-<img src="../assets/img/iching.png" width="100%">
+<img src="/assets/img/iching.png" width="100%">
 
 This software generates IChing (Book of Changes) readings for the user. Each image provides a symbolic representation of the resultant hexigram; the images are generated through an algorithm based upon the coin-toss method of IChing divination and Lejaren A. Hiller Jr’s ILLIAC II subroutine ICHING, developed in 1969 at the University of Illinois for the multimedia performance HPSCHD. The text generated onscreen will include pertinent selections from the most popular translations and commentaries of the IChing.
 
@@ -17,7 +20,7 @@ The aesthetic of these generative covers is based on 1970s science-fiction pulp 
 1. This process is documented in Lejaren Hiller’s article “Programming the I-Ching oracle.” *Computer Studies in the Humanities and Verbal Behavior* 3 (1970): 130-43.
 
 <figure>
-    <img src="../assets/img/Print-12(1).jpg" width="100%" alt="Beall Center installation">
+    <img src="/assets/img/Print-12(1).jpg" width="100%" alt="Beall Center installation">
     <figcaption>Installation of <em>I Ching Online</em> (right) at the Beall Center for Art + Technology; photo by Yubo Dong, courtesy of Beall Center for Art + Technology, Claire Trevor School for the Arts at UC Irvine.</figcaption>
 </figure>
 
@@ -47,15 +50,15 @@ ongoing, video games ([bitsy game engine](https://github.com/le-doux/bitsy))
 
 Short retro-game sketches in game engine Bitsy.org.
 
-<iframe frameborder="0" src="https://itch.io/embed/2377357" width="552" height="167"><a href="https://funkstart.itch.io/punk-show">Punk Show by funkstart</a></iframe>
-<iframe src="https://itch.io/embed/2377327" width="552" height="167" frameborder="0"><a href="https://funkstart.itch.io/i-went-to-mars">I Went to Mars by funkstart</a></iframe>
-<iframe src="https://itch.io/embed/2369753" width="552" height="167" frameborder="0"><a href="https://funkstart.itch.io/old-macdonald">Old MacDonald by funkstart</a></iframe>
+<iframe frameborder="0" src="https://itch.io/embed/2377357" width="100%" height="167"><a href="https://funkstart.itch.io/punk-show">Punk Show by funkstart</a></iframe>
+<iframe src="https://itch.io/embed/2377327" width="100%" height="167" frameborder="0"><a href="https://funkstart.itch.io/i-went-to-mars">I Went to Mars by funkstart</a></iframe>
+<iframe src="https://itch.io/embed/2369753" width="100%" height="167" frameborder="0"><a href="https://funkstart.itch.io/old-macdonald">Old MacDonald by funkstart</a></iframe>
 
 ## ORACLE I
 2023, video (ChatGPT, Runway AI, custom sound hardware)
 
-<img src="../assets/img/oracleI1.png" width="100%">
-<img src="../assets/img/oracleI2.png" width="100%">
+<img src="/assets/img/oracleI1.png" width="100%">
+<img src="/assets/img/oracleI2.png" width="100%">
 <div style="padding:56.25% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/881078741?badge=0&amp;autopause=0&amp;quality_selector=1&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Oracle I"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 Oracle I was generated using AI video generation software using prompts from ICHING (Book of Changes) passages alongside stylistic markers of 1970s sci-fi cinema. The resultant videos are edited together to create a retro-futuristic trailer for a speculative film exploring a future of the past, where hollow beings flit in and out of setpieces referencing forever wars, forbidden love, and techno-colonialism.
@@ -63,9 +66,9 @@ Oracle I was generated using AI video generation software using prompts from ICH
 ## INTERACTIVE FICTION/TEXT ADVENTURES
 2018, websites (HTML5, Processing, Twine, p5.js)
 
-<img src="../assets/img/hex.png" width="100%">
-<img src="../assets/img/01chatter.gif" width="100%">
-<img src="../assets/img/wendy.png" width="100%">
+<img src="/assets/img/hex.png" width="100%">
+<img src="/assets/img/01chatter.gif" width="100%">
+<img src="/assets/img/wendy.png" width="100%">
 
 Websites/games/interactive fiction/non-fiction and text adventure experiments:
   <br /><br />
@@ -77,7 +80,7 @@ Websites/games/interactive fiction/non-fiction and text adventure experiments:
 ## GENERATIVE KALEIDOCOPE
 2016, website, custom software
     
-<img src="../assets/img/02kaleido.png" width="100%">
+<img src="/assets/img/02kaleido.png" width="100%">
 
 These are tests of a software application, originally coded in Processing and translated to p5.js (javaScript), that collects images using the Instagram API, specified using certain tags (examples: #instakaleidoscopic), and creates generative kaleidoscopic videos from them.
 
@@ -130,3 +133,4 @@ This visualization was inspired by Chris Marker's film <em>Sans Soleil</em>, a l
 <div style="padding:75% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/8244687" style="position:absolute;top:0;left:0;width:100%;height:100%;" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
 
 National UFO Reporting Center reported sitings, 1925-2009 is an attempt to visualize the number and frequency of civilian sitings of various shapes of UFOs as reported to an official government agency. This interactive data visualization consists of two basic interfaces; the first displays the increasing frequency of various UFO shapes from the years 1925 through the present, while the second allows the user to select individual years to explore the frequency of sited shapes. While the colors representing the individual UFO shapes were chosen arbitrarily, the variation in color allows the user to differentiate between different UFOS in both interfaces, whether it be only by color, or both color and shape.
+
