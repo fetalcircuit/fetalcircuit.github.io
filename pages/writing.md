@@ -29,6 +29,12 @@ A poem and the machine that “improves” it. Moving a slider expands superlati
 
 <a href="{{ '/writing/remediation.html' | relative_url }}" target="_blank" rel="noopener">Read “remediation — a duet” &#8599;</a>
 
+### Consent Game
+
+2020 · An interactive work about consenting to terms of service, where agreement is the condition of play.
+
+<a href="https://funkstart.itch.io/consent-game" target="_blank" rel="noopener">Play “Consent Game” &#8599;</a>
+
 ### Pow-Wows; or, Long Lost Friend (Annotated)
 
 2018 · Interactive annotated text.
