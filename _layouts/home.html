@@ -5,7 +5,7 @@ title: Home
 
 <style>
 .home-editorial { margin: 28px 0 40px; }
-.home-editorial .home-intro { max-width: 850px; font-size: clamp(22px, 2.6vw, 32px); line-height: 1.4; font-weight: 500; margin: 0 0 24px; }
+.home-editorial .home-intro { max-width: 850px; font-size: 18px; line-height: 1.5; font-weight: 400; margin: 0 0 24px; }
 .home-editorial .home-accent { width: 120px; height: 2px; background: YellowGreen; margin-bottom: 30px; }
 .home-editorial .home-poetry { display: grid; grid-template-columns: minmax(0,.8fr) minmax(0,1.2fr); background: #06070b; color: #f2f4ff; }
 .home-editorial .home-poetry-copy { padding: 36px 30px; align-self: center; }
@@ -31,11 +31,40 @@ title: Home
   .home-editorial .home-updates { gap: 28px; margin-top: 30px; }
   .home-editorial .home-publications { border-left: 0; border-top: 2px solid YellowGreen; padding: 24px 0 0; }
 }
+
+/* Book announcement: photograph on the left, information replacing the logo on the right. */
+.home-editorial .home-book-announcement { gap: 0; align-items: stretch; margin-top: 0; background: #211318; color: #fff4ee; }
+.home-editorial .home-book-photo { min-height: 440px; background-size: 200% auto; background-position: left center; background-repeat: no-repeat; background-color: #291716; }
+.home-editorial .home-book-copy { padding: 36px; align-self: center; }
+.home-editorial .home-book-copy .home-book-eyebrow { margin: 0 0 16px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: #e5c2b8; }
+.home-editorial .home-book-copy h2 { font-size: clamp(48px, 6vw, 72px); color: YellowGreen; text-shadow: 0 0 2px black, 0 0 2px black; }
+.home-editorial .home-book-copy .home-book-subtitle { font-size: 19px; line-height: 1.45; }
+.home-editorial .home-book-copy .home-release { font-size: 25px; margin: 22px 0; padding-left: 14px; border-left: 2px solid YellowGreen; }
+.home-editorial .home-book-copy a { color: #fff4ee; text-decoration-color: YellowGreen; text-underline-offset: 4px; }
+.home-editorial .home-poetry { margin-top: 36px; }
+@media (max-width: 700px) {
+  .home-editorial .home-book-announcement { margin-top: 0; gap: 0; }
+  .home-editorial .home-book-photo { min-height: 0; aspect-ratio: 630 / 621; }
+  .home-editorial .home-book-copy { padding: 28px 22px; }
+  .home-editorial .home-poetry { margin-top: 28px; }
+}
 </style>
 
 <div class="home-editorial">
   <p class="home-intro">Tiffany Funk is a writer, scholar, and artist working across poetry, fiction, sound, and computation.</p>
   <div class="home-accent" aria-hidden="true"></div>
+
+  <section class="home-book home-book-announcement" aria-labelledby="home-hpschd">
+    <div class="home-book-photo" role="img" aria-label="John Cage and Lejaren Hiller working together" style="background-image: url('{{ '/assets/img/candh.png' | relative_url }}');"></div>
+    <div class="home-book-copy">
+      <p class="home-book-eyebrow">Forthcoming · University of Illinois Press</p>
+      <h2 id="home-hpschd">HPSCHD</h2>
+      <p class="home-book-subtitle">Inside John Cage and Lejaren A. Hiller Jr.’s Radical Multimedia Collaboration</p>
+      <p class="home-release">March 2, 2027</p>
+      <p>A study of sound, chance, computation, and the shared work of making art.</p>
+      <p><a href="https://www.press.uillinois.edu/books/?id=c059957">View the book &rarr;</a></p>
+    </div>
+  </section>
 
   <section class="home-poetry" aria-labelledby="home-writing">
     <div class="home-poetry-copy">
@@ -47,19 +76,6 @@ title: Home
     </div>
     <a class="home-preview" href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener" aria-label="Enter The Signal, an interactive poem (opens in a new tab)">
       <img src="{{ '/assets/img/the-signal-preview-wide.jpg' | relative_url }}" alt="The Signal’s television interface, with the message Observer = You">
-    </a>
-  </section>
-
-  <section class="home-book" aria-labelledby="home-hpschd">
-    <div>
-      <h2 id="home-hpschd">HPSCHD</h2>
-      <p><em>Inside John Cage and Lejaren A. Hiller Jr.’s Radical Multimedia Collaboration</em></p>
-      <p>A study of Cage and Hiller’s 1969 multimedia collaboration, exploring sound, chance, computation, and the shared work of making art.</p>
-      <p class="home-date">University of Illinois Press<br>Forthcoming March 2, 2027</p>
-      <p><a href="https://www.press.uillinois.edu/books/?id=c059957">View the book &rarr;</a></p>
-    </div>
-    <a href="https://www.press.uillinois.edu/books/?id=c059957" aria-label="HPSCHD at University of Illinois Press">
-      <img src="{{ '/assets/img/candh.png' | relative_url }}" alt="Image accompanying HPSCHD, Tiffany Funk’s book on John Cage and Lejaren Hiller">
     </a>
   </section>
 
@@ -77,4 +93,5 @@ title: Home
     </section>
   </div>
 </div>
+
 
