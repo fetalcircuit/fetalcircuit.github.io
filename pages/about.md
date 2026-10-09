@@ -6,24 +6,25 @@ permalink: /about
 
 <style>
 .about-page-content { max-width: 880px; padding: 0; margin: 10px auto; }
-.about-profile { margin: 24px 0 0; }
-.about-intro { display: grid; grid-template-columns: minmax(0, 1fr) 180px; gap: 32px; align-items: start; }
+.about-profile { display: flow-root; margin: 24px 0 0; }
+.about-intro { display: block; }
 .about-intro .about-lead { font-size: 18px; line-height: 1.5; margin: 0 0 20px; font-weight: 400; }
-.about-intro .about-portrait { display: block; width: 100%; max-width: 180px; height: auto; margin: 0; }
+.about-portrait { float: right; display: block; width: 180px; max-width: 100%; height: auto; margin: 0 0 24px 32px; }
 .about-links { display: flex; flex-wrap: wrap; gap: 10px 24px; font-size: 15px; line-height: 1.6; }
-.about-biography { max-width: 72ch; margin: 24px 0 0; padding-top: 20px; border-top: 1px solid #ddd; }
+.about-biography { max-width: none; margin: 24px 0 0; padding-top: 20px; border-top: 1px solid #ddd; }
 .about-biography h2 { font-size: 30px; margin-top: 28px; color: YellowGreen; text-shadow: 0 0 2px Black, 0 0 2px Black, 0 0 2px Black, 0 0 2px Black; }
 .about-biography h2:first-child { margin-top: 0; }
 .about-biography p { font-size: 15px; line-height: 1.7; font-weight: 400; }
 @media (max-width: 600px) {
-  .about-profile { margin-top: 20px; }
-  .about-intro { grid-template-columns: minmax(0, 1fr); gap: 20px; }
-  .about-intro .about-portrait { width: 160px; max-width: 100%; }
-  .about-biography { margin-top: 24px; }
+  .about-profile { display: flex; flex-direction: column; margin-top: 20px; }
+  .about-intro { order: 1; }
+  .about-portrait { order: 2; float: none; width: 160px; margin: 20px 0 0; }
+  .about-biography { order: 3; margin-top: 24px; }
 }
 </style>
 
 <div class="about-profile">
+    <img class="about-portrait" src="{{ '/assets/img/funk_profile.jpg' | relative_url }}" alt="Portrait of Tiffany Funk">
   <div class="about-intro">
     <div>
       <p class="about-lead"><b>Tiffany Funk</b> is a writer, scholar, and artist working across poetry, fiction, sound, and computation.</p>
@@ -34,7 +35,6 @@ permalink: /about
         <a href="mailto:tiffany.a.funk@gmail.com">Contact &rarr;</a>
       </nav>
     </div>
-    <img class="about-portrait" src="{{ '/assets/img/funk_profile.jpg' | relative_url }}" alt="Portrait of Tiffany Funk">
   </div>
 
   <div class="about-biography">

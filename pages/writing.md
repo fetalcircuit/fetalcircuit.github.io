@@ -37,7 +37,7 @@ A prayer unfolds through a social-media dashboard. Reblogging carries the poem f
 </div>
 <div class="work-row" markdown="1">
 
-<a class="work-thumbnail" href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/the-signal-preview-wide.jpg' | relative_url }}" alt="The Signal television interface" loading="lazy"></a>
+<a class="work-thumbnail" href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/the-signal-thumb.jpg' | relative_url }}" alt="The Signal: Observer equals you" loading="lazy"></a>
 
 <div class="work-row-copy" markdown="1">
 
