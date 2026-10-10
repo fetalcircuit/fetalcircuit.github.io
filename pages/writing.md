@@ -7,38 +7,86 @@ permalink: /writing
 
 <link rel="stylesheet" href="{{ '/assets/css/page-features.css' | relative_url }}">
 
+<div class="work-page" markdown="1">
+
+Poetry, fiction, and hybrid works for the page and the browser.
+
 ## Published poetry & fiction
+
+<div class="work-row" markdown="1">
+
+<a class="work-thumbnail" href="https://malefica.press/this-is-disease-tiffany-funk-2/" target="_blank" rel="noopener"><img src="{{ '/assets/img/this-is-disease-thumb.jpg' | relative_url }}" alt="Artwork accompanying This is Disease in Malefica Press" loading="lazy"></a>
+
+<div class="work-row-copy" markdown="1">
 
 ### This is Disease
 
 Newly published poem in *Malefica Press*.
 
-[Read “This is Disease” &rarr;](https://malefica.press/this-is-disease-tiffany-funk-2/)
+<a href="https://malefica.press/this-is-disease-tiffany-funk-2/" target="_blank" rel="noopener">Read “This is Disease” &#8599;</a>
+
+<small>Artwork: Malefica Press.</small>
+
+</div>
+
+</div>
+
+<div class="work-row" markdown="1">
+
+<a class="work-thumbnail" href="https://www.gossamerwight.com/store/p/unstable-realities-pdf" target="_blank" rel="noopener"><img src="{{ '/assets/img/unstable-realities-thumb.jpg' | relative_url }}" alt="Unstable Realities anthology cover from Gossamer Wight" loading="lazy"></a>
+
+<div class="work-row-copy" markdown="1">
 
 ### cat.exe
 
 Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
 
-[Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
+<a href="https://www.gossamerwight.com/store/p/unstable-realities-pdf" target="_blank" rel="noopener">Get the anthology &#8599;</a>
+
+</div>
+
+</div>
 
 ## Forthcoming
 
-Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow & Cross Keys.
+Additional poetry and fiction forthcoming in:
 
-<!-- Add contribution titles and publication dates when confirmed. -->
+<div class="work-row" markdown="1">
 
+<div class="work-thumbnail"><img src="{{ '/assets/img/oroboro-forthcoming.svg' | relative_url }}" alt="Oroboro / Death Rattle Literary — forthcoming" loading="lazy"></div>
 
+<div class="work-row-copy" markdown="1">
 
-<div class="work-page" markdown="1">
+### Oroboro / Death Rattle Literary
+
+Forthcoming. Publication details and a reading link will be added when available.
+
+</div>
+
+</div>
+
+<div class="work-row" markdown="1">
+
+<div class="work-thumbnail"><img src="{{ '/assets/img/crow-cross-keys-forthcoming.svg' | relative_url }}" alt="Crow &amp; Cross Keys — forthcoming" loading="lazy"></div>
+
+<div class="work-row-copy" markdown="1">
+
+### Crow & Cross Keys
+
+Forthcoming. Publication details and a reading link will be added when available.
+
+</div>
+
+</div>
+
+<!-- Replace publication-name cards with cover images and add contribution titles when available. -->
+
+## Interactive poetry & hybrid work
 
 <figure class="work-feature">
   <a href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener"><img src="{{ '/assets/img/the-signal-preview-wide.jpg' | relative_url }}" alt="The Signal’s television interface"></a>
   <figcaption><a href="{{ '/writing/the-signal.html' | relative_url }}" target="_blank" rel="noopener">The Signal · Interactive poetry &rarr;</a></figcaption>
 </figure>
-
-Poetry, fiction, and hybrid works for the page and the browser.
-
-## Interactive poetry & hybrid work
 
 Interactive works open in a new tab.
 
@@ -136,6 +184,7 @@ An interactive work that generates I Ching readings and symbolic images through 
 </div>
 
 </div>
+
 ## Longer fiction
 
 <!-- Descriptions and manuscript statuses below are retained from the existing site; confirm that they remain current. -->
@@ -160,4 +209,3 @@ A novel. A literary-horror novel tracing a parasitic ontological presence across
 For *HPSCHD*, *Haunted Circuits and Sounding Care*, and academic essays, visit [Scholarship]({{ '/scholarship' | relative_url }}).
 
 </div>
-
