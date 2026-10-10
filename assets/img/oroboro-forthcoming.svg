@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="380" height="280" viewBox="0 0 380 280">
+<rect width="380" height="280" fill="#211318"/>
+<rect x="18" y="18" width="344" height="244" fill="none" stroke="#94aa65" stroke-width="1"/>
+<path d="M160 55H220 M160 215H220" stroke="#94aa65"/>
+<text x="190" y="115" text-anchor="middle" font-family="Georgia,serif" font-size="36" fill="#c3d994">Oroboro</text>
+<text x="190" y="160" text-anchor="middle" font-family="Georgia,serif" font-size="24" fill="#c3d994">Death Rattle Literary</text>
+<text x="190" y="242" text-anchor="middle" font-family="sans-serif" font-size="12" letter-spacing="2" fill="#e4e1d8">FORTHCOMING</text>
+</svg>
