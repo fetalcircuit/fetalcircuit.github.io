@@ -7,6 +7,28 @@ permalink: /writing
 
 <link rel="stylesheet" href="{{ '/assets/css/page-features.css' | relative_url }}">
 
+## Published poetry & fiction
+
+### This is Disease
+
+Newly published poem in *Malefica Press*.
+
+[Read “This is Disease” &rarr;](https://malefica.press/this-is-disease-tiffany-funk-2/)
+
+### cat.exe
+
+Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
+
+[Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
+
+## Forthcoming
+
+Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow & Cross Keys.
+
+<!-- Add contribution titles and publication dates when confirmed. -->
+
+
+
 <div class="work-page" markdown="1">
 
 <figure class="work-feature">
@@ -114,26 +136,6 @@ An interactive work that generates I Ching readings and symbolic images through 
 </div>
 
 </div>
-## Published poetry & fiction
-
-### This is Disease
-
-Newly published poem in *Malefica Press*.
-
-[Read “This is Disease” &rarr;](https://malefica.press/this-is-disease-tiffany-funk-2/)
-
-### cat.exe
-
-Newly published in *Unstable Realities*, an anthology from Gossamer Wight.
-
-[Get the anthology &rarr;](https://www.gossamerwight.com/store/p/unstable-realities-pdf)
-
-## Forthcoming
-
-Additional poetry and fiction forthcoming in Oroboro / Death Rattle Literary and Crow & Cross Keys.
-
-<!-- Add contribution titles and publication dates when confirmed. -->
-
 ## Longer fiction
 
 <!-- Descriptions and manuscript statuses below are retained from the existing site; confirm that they remain current. -->
