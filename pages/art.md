@@ -21,7 +21,7 @@ permalink: /art/
 </a>
 
 <a class="art-card" href="{{ '/art/video-game-sketches/' | relative_url }}" aria-label="View Video game sketches">
-  <img src="{{ '/assets/img/old-macdonald-thumb.png' | relative_url }}" alt="Video game sketches" loading="lazy">
+  <img src="{{ '/assets/img/punk-show-thumb.png' | relative_url }}" alt="Video game sketches" loading="lazy">
   <span class="art-card-label"><strong>Video game sketches</strong><span>Ongoing · Games</span></span>
 </a>
 
