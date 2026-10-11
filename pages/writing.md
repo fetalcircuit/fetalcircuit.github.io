@@ -15,7 +15,7 @@ Poetry, fiction, and hybrid works for the page and the browser.
 
 <div class="work-row" markdown="1">
 
-<a class="work-thumbnail" href="https://malefica.press/this-is-disease-tiffany-funk-2/" target="_blank" rel="noopener"><img src="{{ '/assets/img/this-is-disease-thumb.jpg' | relative_url }}" alt="Artwork accompanying This is Disease in Malefica Press" loading="lazy"></a>
+<a class="work-thumbnail" href="https://malefica.press/this-is-disease-tiffany-funk-2/" target="_blank" rel="noopener"><img src="{{ '/assets/img/this-is-disease-thumb.png' | relative_url }}" alt="Artwork accompanying This is Disease in Malefica Press" loading="lazy"></a>
 
 <div class="work-row-copy" markdown="1">
 
@@ -33,7 +33,7 @@ Newly published poem in *Malefica Press*.
 
 <div class="work-row" markdown="1">
 
-<a class="work-thumbnail" href="https://www.gossamerwight.com/store/p/unstable-realities-pdf" target="_blank" rel="noopener"><img src="{{ '/assets/img/unstable-realities-thumb.jpg' | relative_url }}" alt="Unstable Realities anthology cover from Gossamer Wight" loading="lazy"></a>
+<a class="work-thumbnail" href="https://www.gossamerwight.com/store/p/unstable-realities-pdf" target="_blank" rel="noopener"><img src="{{ '/assets/img/unstable-realities-thumb.png' | relative_url }}" alt="Unstable Realities anthology cover from Gossamer Wight" loading="lazy"></a>
 
 <div class="work-row-copy" markdown="1">
 
