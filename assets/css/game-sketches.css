@@ -1,0 +1,7 @@
+/* Small, individually linked game thumbnails on the Video game sketches page. */
+.art-detail .game-sketch-grid { display: grid; grid-template-columns: repeat(auto-fit, 190px); gap: 28px 24px; margin: 28px 0 40px; }
+.art-detail .game-sketch-card { display: block; width: 190px; color: inherit; text-decoration: none; }
+.art-detail .game-sketch-card img { display: block; width: 190px; height: 140px; max-width: 100%; margin: 0; object-fit: cover; object-position: center; background: #08090b; }
+.art-detail .game-sketch-card span { display: block; margin-top: 10px; font-size: 15px; line-height: 1.5; }
+.art-detail .game-sketch-card:hover span { text-decoration: underline; text-underline-offset: 3px; }
+.art-detail .game-sketch-card:focus-visible { outline: 3px solid YellowGreen; outline-offset: 5px; }
